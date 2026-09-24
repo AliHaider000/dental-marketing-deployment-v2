@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dental-marketing.org/sitemap.xml
+Sitemap: https://www.dental-marketing.org/sitemap.xml

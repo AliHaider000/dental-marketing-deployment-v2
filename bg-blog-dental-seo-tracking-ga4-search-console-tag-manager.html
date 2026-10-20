@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+
+<html lang="bg">
+<head>
+<meta charset="utf-8"/>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M9N9HKLD');</script>
+<!-- End Google Tag Manager -->
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Настройка на проследяването за дентално SEO: GA4, Search Console, GTM (ръководство за 2026 г.)</title>
+<meta content="Настройте GA4, Search Console, Bing и Google Tag Manager за дентална практика, след което проследявайте натисканията върху телефонния номер и изпратените форми, които реално носят пациенти." name="description"/>
+<link href="https://www.dental-marketing.org/bg/blog/dental-seo-tracking-ga4-search-console-tag-manager" rel="canonical"/><link href="https://www.dental-marketing.org/blog/dental-seo-tracking-ga4-search-console-tag-manager" hreflang="en" rel="alternate"/><link href="https://www.dental-marketing.org/bg/blog/dental-seo-tracking-ga4-search-console-tag-manager" hreflang="bg" rel="alternate"/><link href="https://www.dental-marketing.org/blog/dental-seo-tracking-ga4-search-console-tag-manager" hreflang="x-default" rel="alternate"/>
+<meta content="Настройка на проследяването за дентално SEO: GA4, Search Console, GTM (ръководство за 2026 г.)" property="og:title"/>
+<meta content="Настройте GA4, Search Console, Bing и Google Tag Manager за дентална практика, след което проследявайте натисканията върху телефонния номер и изпратените форми, които реално носят пациенти." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://www.dental-marketing.org/bg/blog/dental-seo-tracking-ga4-search-console-tag-manager" property="og:url"/>
+<meta content="https://www.dental-marketing.org/og-image.jpg" property="og:image"/>
+<meta content="Dental Marketing" property="og:site_name"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="index, follow, max-image-preview:large, max-snippet:-1" name="robots"/>
+<meta content="#0A3F38" media="(prefers-color-scheme: light)" name="theme-color"/>
+<meta content="#0E1613" media="(prefers-color-scheme: dark)" name="theme-color"/>
+<link href="/favicon.png" rel="icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://www.youtube.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&amp;family=Public+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Проследяване в денталното SEO: как да настроите GA4, Search Console и Google Tag Manager","description":"Настройте GA4, Search Console, Bing и Google Tag Manager за дентална практика, след което проследявайте натисканията върху телефонния номер и изпратените форми, които реално носят пациенти.","image":"https://www.dental-marketing.org/og-image.jpg","datePublished":"2026-09-22","dateModified":"2026-09-22","author":{"@type":"Person","name":"Maksim Lezginov","url":"https://www.dental-marketing.org"},"publisher":{"@type":"Organization","name":"Dental Marketing","url":"https://www.dental-marketing.org"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.dental-marketing.org/bg/blog/dental-seo-tracking-ga4-search-console-tag-manager","inLanguage":"bg"},"isPartOf":{"@type":"Blog","name":"Ръководства за дентално SEO","url":"https://www.dental-marketing.org/bg/blog","inLanguage":"bg"},"inLanguage":"bg"}</script>
+<style>
+
+  :root{
+    --paper:#F4F6F4; --card:#FFFFFF; --sunk:#EBEFEC; --ink:#16231F; --ink-soft:#45564E; --ink-faint:#7A8B82;
+    --teal:#0F5D52; --teal-deep:#0A3F38; --teal-tint:#E4EFEC; --gold:#A9761E; --gold-tint:#F4E9D4;
+    --line:#DCE3DE; --track:#E1E7E3; --ghost:#B9C6BF;
+    --shadow:0 1px 2px rgba(15,35,30,.04), 0 8px 24px -12px rgba(15,35,30,.12);
+    --lift:0 2px 4px rgba(15,35,30,.05), 0 18px 40px -18px rgba(15,35,30,.22);
+    --serif:"Fraunces","Iowan Old Style","Palatino Linotype",Georgia,serif;
+    --sans:"Public Sans","Segoe UI",-apple-system,BlinkMacSystemFont,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --paper:#0E1613; --card:#16211C; --sunk:#121C18; --ink:#EAF1EC; --ink-soft:#AEC0B6; --ink-faint:#7C9088;
+      --teal:#47AE99; --teal-deep:#6FC7B4; --teal-tint:#1B2A26; --gold:#E3B45C; --gold-tint:#2B2418;
+      --line:#253027; --track:#202B26; --ghost:#3C4C45;
+      --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 24px -12px rgba(0,0,0,.5);
+      --lift:0 2px 4px rgba(0,0,0,.35), 0 18px 40px -18px rgba(0,0,0,.7);
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#0E1613; --card:#16211C; --sunk:#121C18; --ink:#EAF1EC; --ink-soft:#AEC0B6; --ink-faint:#7C9088;
+    --teal:#47AE99; --teal-deep:#6FC7B4; --teal-tint:#1B2A26; --gold:#E3B45C; --gold-tint:#2B2418;
+    --line:#253027; --track:#202B26; --ghost:#3C4C45;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 24px -12px rgba(0,0,0,.5);
+    --lift:0 2px 4px rgba(0,0,0,.35), 0 18px 40px -18px rgba(0,0,0,.7);
+  }
+
+  *{ box-sizing:border-box; }
+  html{ overflow-x:clip; }
+  @media (prefers-reduced-motion:reduce){ *{ animation-duration:.01ms!important; transition-duration:.01ms!important; } }
+  body{
+    margin:0; background:var(--paper); color:var(--ink); font-family:var(--sans);
+    -webkit-font-smoothing:antialiased; line-height:1.5; padding-bottom:82px; overflow-x:clip; max-width:100%;
+  }
+  img{ max-width:100%; display:block; }
+  a{ color:var(--teal-deep); }
+  h1,h2,h3,h4{ font-family:var(--serif); color:var(--ink); text-wrap:balance; margin:0; }
+  p{ color:var(--ink-soft); margin:0 0 .9em; max-width:62ch; }
+  p:last-child{ margin-bottom:0; }
+  :focus-visible{ outline:3px solid var(--gold); outline-offset:3px; border-radius:4px; }
+  .wrap{ width:100%; max-width:1100px; margin:0 auto; padding:0 clamp(18px,5vw,52px); }
+  section{ padding:clamp(46px,6.5vw,78px) 0; }
+  .eyebrow{ display:inline-block; font-size:.71rem; font-weight:800; letter-spacing:.13em; text-transform:uppercase; color:var(--teal); margin-bottom:12px; }
+  .shead{ margin-bottom:clamp(24px,3.6vw,36px); }
+  .shead h2{ font-size:clamp(1.55rem,3.4vw,2.3rem); line-height:1.1; font-weight:600; }
+  .shead p{ margin-top:10px; font-size:1rem; }
+
+  .btn{ display:inline-flex; align-items:center; justify-content:center; gap:8px; font-family:var(--sans);
+    font-weight:800; font-size:.94rem; text-decoration:none; padding:15px 26px; border-radius:999px;
+    border:1px solid transparent; cursor:pointer; transition:transform .15s ease, box-shadow .15s ease; }
+  .btn-primary{ background:var(--gold); color:#1A140A; box-shadow:var(--shadow); }
+  .btn-primary:hover{ transform:translateY(-2px); box-shadow:var(--lift); }
+  .btn-ghost{ background:transparent; color:var(--ink); border-color:var(--line); }
+  .btn-ghost:hover{ border-color:var(--teal); }
+  .btn-sm{ padding:11px 18px; font-size:.85rem; }
+
+  /* masthead */
+  .masthead{ border-bottom:1px solid var(--line); padding:13px 0; position:sticky; top:0; z-index:40;
+    background:color-mix(in srgb, var(--paper) 92%, transparent); backdrop-filter:blur(8px); }
+  .mast-in{ display:flex; align-items:center; justify-content:space-between; gap:14px; }
+  .brand{ display:flex; align-items:center; gap:11px; text-decoration:none; min-width:0; }
+  .brand img{ width:38px; height:38px; border-radius:9px; flex:0 0 auto; }
+  .brand span{ font-family:var(--sans); font-weight:800; font-size:.94rem; color:var(--ink); letter-spacing:-.01em; }
+  .brand span b{ color:var(--teal); }
+  @media (max-width:430px){ .brand span{ display:none; } }
+
+  /* hero */
+  .hero{ padding-top:clamp(30px,4.5vw,52px); padding-bottom:clamp(30px,4.5vw,48px); }
+  .hero-grid{ display:grid; grid-template-columns:1.02fr .98fr; gap:clamp(24px,3.6vw,44px); align-items:center; }
+  @media (max-width:920px){ .hero-grid{ grid-template-columns:1fr; } }
+  .hero h1{ font-size:clamp(2.3rem,5.6vw,3.9rem); line-height:1; font-weight:600; letter-spacing:-.022em; }
+  .hero h1 em{ font-style:normal; color:var(--teal); }
+  .hero .sub{ margin-top:16px; font-size:clamp(1rem,1.4vw,1.1rem); color:var(--ink-soft); max-width:40ch; }
+  .hero-cta{ display:flex; flex-wrap:wrap; gap:11px; margin-top:24px; }
+  .hero-note{ font-size:.79rem; color:var(--ink-faint); margin-top:14px; }
+
+  .vid{ display:block; position:relative; width:100%; aspect-ratio:16/9; border-radius:16px; overflow:hidden;
+    background:var(--sunk); box-shadow:var(--lift); text-decoration:none; border:1px solid var(--line); }
+  .vid img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .vid::after{ content:""; position:absolute; inset:0; pointer-events:none;
+    background:linear-gradient(180deg, rgba(8,18,15,.05) 0%, rgba(8,18,15,.66) 100%); }
+  .vid-face{ position:absolute; inset:0; z-index:2; display:flex; flex-direction:column; align-items:center;
+    justify-content:center; gap:7px; text-align:center; padding:18px; color:#fff; }
+  .vid-play{ width:58px; height:58px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+    background:rgba(255,255,255,.18); border:2px solid rgba(255,255,255,.6); margin-top:auto; margin-bottom:auto;
+    transition:transform .18s ease, background .18s ease; }
+  .vid:hover .vid-play{ transform:scale(1.08); background:rgba(255,255,255,.3); }
+  .vid-play svg{ margin-left:4px; }
+  .vid-t{ font-weight:800; font-size:.92rem; text-shadow:0 1px 6px rgba(0,0,0,.5); }
+  .vid-s{ font-size:.75rem; opacity:.92; text-shadow:0 1px 6px rgba(0,0,0,.5); }
+  .vid-cap{ margin-top:9px; font-size:.77rem; color:var(--ink-faint); text-align:center; }
+  /* ---------- VSL ---------- */
+  .vsl-sec{ background:var(--sunk); }
+  .vsl-wrap{ max-width:860px; margin-inline:auto; }
+  .vsl-frame{ position:relative; display:block; width:100%; aspect-ratio:16/9; border-radius:18px;
+    overflow:hidden; border:1px solid var(--line); box-shadow:var(--lift); text-decoration:none; background:#0B1714; }
+  .vsl-frame img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .vsl-frame::after{ content:""; position:absolute; inset:0; pointer-events:none;
+    background:radial-gradient(ellipse at center, rgba(0,0,0,.18) 0%, rgba(0,0,0,.44) 100%); }
+  .vsl-play{ position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); z-index:2;
+    width:86px; height:86px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+    background:rgba(255,255,255,.16); border:2.5px solid rgba(255,255,255,.75);
+    transition:transform .18s ease, background .18s ease; }
+  .vsl-frame:hover .vsl-play{ transform:translate(-50%,-50%) scale(1.09); background:rgba(255,255,255,.3); }
+  .vsl-meta{ position:absolute; left:0; right:0; bottom:0; z-index:2; display:flex; justify-content:space-between;
+    align-items:center; gap:12px; padding:14px 18px; color:#fff; font-size:.8rem; font-weight:700;
+    background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.62)); }
+  .vsl-meta span{ opacity:.92; font-weight:600; }
+  .vsl-note{ margin-top:12px; text-align:center; font-size:.79rem; color:var(--ink-faint); }
+  /* ---------- click to load YouTube (facade: zero YT code until play) ---------- */
+  .ytl{ position:relative; display:block; width:100%; aspect-ratio:16/9; border-radius:16px; overflow:hidden;
+    border:1px solid var(--line); box-shadow:var(--lift); background:#0B1714; cursor:pointer; padding:0; }
+  .ytl img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .ytl iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; }
+  .ytl::after{ content:""; position:absolute; inset:0; pointer-events:none;
+    background:radial-gradient(ellipse at center, rgba(0,0,0,.14) 0%, rgba(0,0,0,.42) 100%); }
+  .ytl.playing::after{ display:none; }
+  .ytl-btn{ position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); z-index:2;
+    width:82px; height:82px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+    background:rgba(255,255,255,.17); border:2.5px solid rgba(255,255,255,.78);
+    transition:transform .18s ease, background .18s ease; }
+  .ytl:hover .ytl-btn{ transform:translate(-50%,-50%) scale(1.09); background:rgba(255,255,255,.32); }
+  .ytl.playing .ytl-btn{ display:none; }
+
+  /* strip */
+  .strip{ border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:var(--card); }
+  .strip-in{ display:grid; grid-template-columns:repeat(4,1fr); }
+  @media (max-width:780px){ .strip-in{ grid-template-columns:repeat(2,1fr); } }
+  .sc{ padding:20px clamp(12px,2.2vw,22px); border-left:1px solid var(--line); }
+  .sc:first-child{ border-left:0; }
+  @media (max-width:780px){ .sc:nth-child(odd){ border-left:0; } .sc:nth-child(n+3){ border-top:1px solid var(--line); } }
+  .sc .n{ font-family:var(--serif); font-size:clamp(1.3rem,2.8vw,1.75rem); font-weight:700; line-height:1; font-variant-numeric:tabular-nums; }
+  .sc .l{ font-size:.75rem; color:var(--ink-faint); margin-top:6px; line-height:1.4; }
+
+  /* problem */
+  .prob{ background:var(--sunk); }
+  .prob-in{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(22px,4vw,52px); align-items:center; }
+  @media (max-width:820px){ .prob-in{ grid-template-columns:1fr; } }
+  .prob h2{ font-size:clamp(1.5rem,3.2vw,2.2rem); line-height:1.12; font-weight:600; }
+  .prob .lede{ font-size:1.05rem; color:var(--ink-soft); margin-top:14px; }
+  .dec-head{ font-size:.68rem; font-weight:800; letter-spacing:.11em; text-transform:uppercase;
+    color:var(--ink-faint); margin-bottom:12px; display:flex; gap:8px; align-items:center; }
+  .dec{ display:flex; flex-direction:column; gap:9px; }
+  .dec-row{ background:var(--card); border:1px solid var(--line); border-radius:13px; padding:14px 16px; }
+  .dec-said{ font-size:.86rem; color:var(--ink-faint); font-style:italic; line-height:1.45; }
+  .dec-means{ display:flex; gap:9px; align-items:baseline; margin-top:8px; }
+  .dec-means svg{ width:14px; height:14px; color:var(--teal); flex:0 0 auto; transform:translateY(2px); }
+  .dec-means b{ font-size:.95rem; font-weight:800; color:var(--ink); line-height:1.35; }
+  .dec-foot{ margin-top:14px; font-size:.82rem; color:var(--ink-faint); }
+
+  /* was -> now tiles */
+  .wn{ display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:18px; }
+  @media (max-width:620px){ .wn{ grid-template-columns:1fr; } }
+  .wn-tile{ background:var(--sunk); border-radius:13px; padding:15px 16px; }
+  .wn-l{ font-size:.71rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-faint); }
+  .wn-row{ display:flex; align-items:baseline; gap:9px; margin-top:10px; }
+  .wn-was{ font-family:var(--serif); font-size:1.05rem; font-weight:700; color:var(--ink-faint); font-variant-numeric:tabular-nums; }
+  .wn-arrow{ color:var(--ghost); flex:0 0 auto; transform:translateY(-1px); }
+  .wn-now{ font-family:var(--serif); font-size:1.7rem; font-weight:700; color:var(--teal); line-height:1; font-variant-numeric:tabular-nums; }
+  .wn-tag{ font-size:.7rem; color:var(--ink-faint); margin-top:6px; }
+
+  /* result cards */
+  .rcard{ background:var(--card); border:1px solid var(--line); border-radius:20px; padding:clamp(20px,3vw,32px); box-shadow:var(--shadow); }
+  .rcard + .rcard{ margin-top:20px; }
+  .rtop{ display:flex; flex-wrap:wrap; gap:12px 16px; align-items:center; justify-content:space-between; }
+  .rid{ display:flex; align-items:center; gap:13px; min-width:0; }
+  .rph{ width:52px; height:52px; border-radius:50%; object-fit:cover; border:2px solid var(--line); flex:0 0 auto; }
+  .rname{ font-family:var(--serif); font-size:clamp(1.05rem,2vw,1.32rem); font-weight:600; line-height:1.2; }
+  .rmeta{ font-size:.78rem; color:var(--ink-faint); margin-top:3px; }
+  .rtag{ font-size:.67rem; font-weight:800; letter-spacing:.07em; text-transform:uppercase; padding:6px 11px;
+    border-radius:999px; background:var(--teal-tint); color:var(--teal-deep); white-space:nowrap; }
+  .rtag.nda{ background:var(--gold-tint); color:var(--gold); }
+
+  /* GRAPHIC A: before / after split panel */
+  .ba{ display:grid; grid-template-columns:1fr auto 1fr; gap:0; margin-top:24px; border:1px solid var(--line);
+    border-radius:16px; overflow:hidden; }
+  @media (max-width:640px){ .ba{ grid-template-columns:1fr; } }
+  .ba-side{ padding:24px 22px; background:var(--sunk); }
+  .ba-side.after{ background:var(--teal-tint); }
+  .ba-when{ font-size:.68rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-faint); }
+  .ba-side.after .ba-when{ color:var(--teal-deep); }
+  .ba-n{ font-family:var(--serif); font-size:clamp(2.1rem,6vw,3.1rem); font-weight:700; line-height:1; margin-top:12px;
+    font-variant-numeric:tabular-nums; color:var(--ink); letter-spacing:-.02em; }
+  .ba-side.after .ba-n{ color:var(--teal); }
+  .ba-l{ font-size:.83rem; color:var(--ink-faint); margin-top:8px; }
+  .ba-sub{ margin-top:16px; padding-top:14px; border-top:1px solid var(--line); }
+  .ba-sub b{ font-family:var(--serif); font-size:1.25rem; font-weight:700; color:var(--ink); display:block; font-variant-numeric:tabular-nums; }
+  .ba-side.after .ba-sub b{ color:var(--teal); }
+  .ba-sub span{ font-size:.79rem; color:var(--ink-faint); }
+  .ba-mid{ display:flex; align-items:center; justify-content:center; background:var(--card); padding:0 14px; }
+  @media (max-width:640px){ .ba-mid{ padding:10px 0; } .ba-mid svg{ transform:rotate(90deg); } }
+  .ba-mid .pill{ font-family:var(--serif); font-weight:700; font-size:1rem; color:var(--gold); white-space:nowrap; }
+
+  /* GRAPHIC B: paired columns */
+  .pair{ display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:24px; }
+  .pcol{ background:var(--sunk); border-radius:14px; padding:20px 16px; text-align:center; }
+  .pcol.now{ background:var(--teal-tint); }
+  .pbar{ height:104px; display:flex; align-items:flex-end; justify-content:center; margin-bottom:14px; }
+  .pbar span{ width:60px; border-radius:8px 8px 0 0; display:block; }
+  .pn{ font-family:var(--serif); font-size:clamp(1.5rem,4vw,2.1rem); font-weight:700; line-height:1; font-variant-numeric:tabular-nums; }
+  .pcol.now .pn{ color:var(--teal); }
+  .pl{ font-size:.77rem; color:var(--ink-faint); margin-top:7px; }
+
+  .kpi3{ display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:18px; }
+  @media (max-width:600px){ .kpi3{ grid-template-columns:1fr; } }
+  .kpi{ display:flex; align-items:baseline; gap:10px; padding:13px 15px; background:var(--sunk); border-radius:11px; }
+  .kpi b{ font-family:var(--serif); font-size:1.15rem; font-weight:700; color:var(--ink); flex:0 0 auto; font-variant-numeric:tabular-nums; }
+  .kpi span{ font-size:.78rem; color:var(--ink-faint); line-height:1.35; }
+
+  .invest{ display:flex; flex-wrap:wrap; align-items:center; gap:9px 16px; margin-top:20px;
+    background:var(--gold-tint); border-radius:12px; padding:14px 18px; }
+  .invest .amt{ font-family:var(--serif); font-size:1.15rem; font-weight:700; color:var(--gold); white-space:nowrap; }
+  .invest .txt{ font-size:.85rem; color:var(--ink-soft); flex:1; min-width:210px; }
+  .rlink{ display:inline-block; margin-top:16px; font-size:.85rem; font-weight:800; color:var(--teal-deep); text-decoration:none; }
+  .rlink:hover{ text-decoration:underline; }
+
+  /* guarantee */
+  .gb{ background:var(--teal-deep); color:#EFF5F2; }
+  :root[data-theme="dark"] .gb{ background:#0B1714; border-block:1px solid var(--line); }
+  .gb h2{ color:#fff; font-size:clamp(1.7rem,3.9vw,2.6rem); line-height:1.08; font-weight:600; max-width:16ch; }
+  .gb .eyebrow{ color:var(--gold); }
+  .gg{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(22px,4vw,46px); align-items:start; }
+  @media (max-width:840px){ .gg{ grid-template-columns:1fr; } }
+  .gsub{ margin-top:16px; font-size:.95rem; color:#B7CDC5; max-width:40ch; }
+  :root[data-theme="dark"] .gsub{ color:var(--ink-soft); }
+  .gi{ display:grid; grid-template-columns:auto 1fr; gap:13px; padding:14px 0; border-top:1px solid rgba(255,255,255,.14); align-items:start; }
+  .gi:first-child{ border-top:0; }
+  .gm{ width:21px; height:21px; border-radius:50%; background:var(--gold); color:#1A140A; display:flex;
+    align-items:center; justify-content:center; font-size:11.5px; font-weight:900; flex:0 0 auto; margin-top:2px; }
+  .gt{ color:#fff; font-weight:700; font-size:.95rem; }
+  .gd{ color:#B7CDC5; font-size:.84rem; margin-top:3px; line-height:1.5; }
+  :root[data-theme="dark"] .gt{ color:var(--ink); }
+  :root[data-theme="dark"] .gd{ color:var(--ink-soft); }
+
+  /* plan */
+  .flow{ display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+  @media (max-width:900px){ .flow{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:480px){ .flow{ grid-template-columns:1fr; } }
+  .node{ background:var(--card); border:1px solid var(--line); border-radius:14px; padding:20px 17px; display:flex; flex-direction:column; gap:9px; }
+  .node.last{ background:var(--teal-tint); border-color:var(--teal); }
+  .node-m{ font-size:.66rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--gold); }
+  .node svg{ width:30px; height:30px; color:var(--teal); }
+  .node h4{ font-family:var(--sans); font-size:.95rem; font-weight:800; line-height:1.25; }
+  .node p{ font-size:.79rem; color:var(--ink-faint); line-height:1.5; margin:0; }
+
+  /* services */
+  .svc-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+  @media (max-width:920px){ .svc-grid{ grid-template-columns:repeat(3,1fr); } }
+  @media (max-width:640px){ .svc-grid{ grid-template-columns:repeat(2,1fr); } }
+  .svc{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:15px 14px;
+    display:flex; align-items:center; gap:11px; min-width:0; }
+  .svc svg{ width:21px; height:21px; color:var(--teal); flex:0 0 auto; }
+  .svc span{ font-size:.83rem; font-weight:700; line-height:1.3; }
+
+  /* pricing */
+  .pg{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+  @media (max-width:840px){ .pg{ grid-template-columns:1fr; max-width:440px; margin-inline:auto; } }
+  .tier{ background:var(--card); border:1px solid var(--line); border-radius:18px; padding:26px 22px 26px; position:relative; }
+  .tier.pick{ border-color:var(--teal); box-shadow:var(--lift); }
+  .tbadge{ position:absolute; top:-11px; left:22px; background:var(--teal); color:#fff; font-size:.65rem;
+    font-weight:800; letter-spacing:.08em; text-transform:uppercase; padding:5px 11px; border-radius:999px; }
+  :root[data-theme="dark"] .tbadge{ color:#08110E; }
+  .tn{ font-family:var(--serif); font-size:1.25rem; font-weight:600; }
+  .tf{ font-size:.81rem; color:var(--ink-faint); line-height:1.5; min-height:3em; margin-top:5px; }
+  .tp{ font-family:var(--serif); font-size:clamp(1.9rem,4.6vw,2.5rem); font-weight:700; line-height:1; margin-top:12px; font-variant-numeric:tabular-nums; }
+  .tp small{ font-family:var(--sans); font-size:.84rem; font-weight:600; color:var(--ink-faint); }
+  .tier .btn{ margin-top:16px; width:100%; }
+  .pfoot{ margin-top:20px; display:grid; grid-template-columns:repeat(3,1fr); gap:13px; }
+  @media (max-width:740px){ .pfoot{ grid-template-columns:1fr; } }
+  .pf{ display:flex; gap:10px; align-items:flex-start; font-size:.84rem; color:var(--ink-soft); }
+  .pf svg{ width:17px; height:17px; color:var(--teal); flex:0 0 auto; margin-top:2px; }
+
+  /* calendly */
+  .cal-sec{ background:var(--sunk); }
+  .cal-shell{ background:#FFFFFF; border:1px solid var(--line); border-radius:18px; padding:10px; box-shadow:var(--shadow); overflow:hidden; }
+  :root[data-theme="dark"] .cal-shell{ border-color:rgba(255,255,255,.14); }
+  .calendly-inline-widget{ min-width:280px; width:100%; height:720px; border-radius:12px; overflow:hidden; }
+  .calendly-inline-widget iframe{ width:100%; height:100%; border:0; display:block; }
+  @media (max-width:600px){ .calendly-inline-widget{ height:1000px; } }
+  .cal-load{ display:flex; flex-direction:column; align-items:center; justify-content:center; gap:13px;
+    height:720px; text-align:center; padding:40px 24px; color:#16231F; }
+  @media (max-width:600px){ .cal-load{ height:1000px; } }
+  .cal-spin{ width:26px; height:26px; border-radius:50%; border:2.5px solid #D5DFDA; border-top-color:#0F5D52;
+    animation:calspin .8s linear infinite; }
+  @keyframes calspin{ to{ transform:rotate(360deg); } }
+  @media (prefers-reduced-motion:reduce){ .cal-spin{ animation:none; } }
+  .cal-fallback{ display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px;
+    min-height:420px; text-align:center; padding:48px 24px; color:#16231F; }
+  .cal-fallback .t{ font-family:var(--serif); font-size:1.3rem; font-weight:600; color:#0A3F38; }
+  .cal-fallback .d{ font-size:.87rem; color:#45564E; max-width:42ch; line-height:1.6; }
+
+  /* close */
+  .cc{ background:var(--teal-deep); border-radius:20px; padding:clamp(26px,4.6vw,46px); color:#EFF5F2;
+    display:grid; grid-template-columns:auto 1fr; gap:clamp(18px,3.2vw,32px); align-items:center; }
+  :root[data-theme="dark"] .cc{ background:#0B1714; border:1px solid var(--line); }
+  @media (max-width:700px){ .cc{ grid-template-columns:1fr; } }
+  .cc img{ width:96px; height:96px; border-radius:50%; object-fit:cover; border:3px solid rgba(255,255,255,.2); }
+  .cc h2{ color:#fff; font-size:clamp(1.45rem,3.4vw,2.1rem); line-height:1.12; font-weight:600; }
+  .cc p{ color:#B7CDC5; margin-top:11px; font-size:.94rem; max-width:50ch; }
+  :root[data-theme="dark"] .cc p{ color:var(--ink-soft); }
+  .cc .btn{ margin-top:18px; }
+
+  footer{ padding:28px 0 40px; }
+  footer p{ font-size:.74rem; color:var(--ink-faint); max-width:none; }
+
+  .sticky{ position:fixed; left:0; right:0; bottom:0; z-index:50; background:var(--teal-deep); border-top:1px solid rgba(255,255,255,.09); }
+  :root[data-theme="dark"] .sticky{ background:#0B1714; }
+  .sticky-in{ display:flex; align-items:center; justify-content:space-between; gap:14px;
+    padding-block:11px; padding-bottom:calc(11px + env(safe-area-inset-bottom, 0px)); }
+  .sticky .btn{ flex:0 0 auto; }
+  .sticky .msg{ overflow:hidden; }
+  .sticky .msg{ color:#EAF1EC; font-size:.87rem; font-weight:700; min-width:0; }
+  .sticky .msg small{ display:block; font-weight:400; color:#A9C4BC; font-size:.72rem; margin-top:2px; }
+  @media (max-width:560px){ .sticky .msg small{ display:none; } .sticky .msg{ font-size:.79rem; } }
+
+/* dark-theme overrides, correctly scoped so they never apply in light mode */
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]) .invest .txt{ color:var(--ink-soft); }
+  :root:not([data-theme="light"]) .gb{ background:#0B1714; border-block:1px solid var(--line); }
+  :root:not([data-theme="light"]) .gsub{ color:var(--ink-soft); }
+  :root:not([data-theme="light"]) .gt{ color:var(--ink); }
+  :root:not([data-theme="light"]) .gd{ color:var(--ink-soft); }
+  :root:not([data-theme="light"]) .tbadge{ color:#08110E; }
+  :root:not([data-theme="light"]) .cal-shell{ border-color:rgba(255,255,255,.14); }
+  :root:not([data-theme="light"]) .cc{ background:#0B1714; border:1px solid var(--line); }
+  :root:not([data-theme="light"]) .cc p{ color:var(--ink-soft); }
+  :root:not([data-theme="light"]) .sticky{ background:#0B1714; }
+}
+
+/* ============================================================
+   BLOG + INDEX PAGES  ·  themed for light and dark
+   ============================================================ */
+
+/* ---------- header nav ---------- */
+.mast-nav{ display:flex; align-items:center; gap:clamp(4px,1.4vw,18px); margin-left:auto; }
+.mast-nav a.navlink{
+  font-family:var(--sans); font-weight:700; font-size:.86rem; color:var(--ink-soft);
+  text-decoration:none; padding:8px 10px; border-radius:8px; white-space:nowrap;
+  transition:color .15s ease, background .15s ease;
+}
+.mast-nav a.navlink:hover{ color:var(--ink); background:var(--sunk); }
+.mast-nav a.navlink[aria-current="page"]{ color:var(--teal); background:var(--teal-tint); }
+@media (max-width:620px){
+  .mast-nav a.navlink{ font-size:.78rem; padding:7px 7px; }
+  .brand span{ display:none; }
+}
+@media (max-width:400px){
+  .mast-nav a.navlink{ font-size:.74rem; padding:6px 5px; }
+}
+
+/* ---------- article page ---------- */
+.art-hero{ padding:clamp(34px,5vw,58px) 0 clamp(20px,3vw,30px); border-bottom:1px solid var(--line); }
+.crumb{ font-size:.78rem; color:var(--ink-faint); margin-bottom:14px; }
+.crumb a{ color:var(--ink-faint); text-decoration:none; }
+.crumb a:hover{ color:var(--teal); text-decoration:underline; }
+.crumb span{ margin:0 7px; opacity:.55; }
+.art-hero h1{
+  font-size:clamp(1.85rem,4.2vw,3rem); line-height:1.08; font-weight:600;
+  max-width:19ch; letter-spacing:-.015em;
+}
+.art-dek{ margin-top:16px; font-size:clamp(1rem,1.35vw,1.13rem); color:var(--ink-soft); max-width:60ch; line-height:1.6; }
+.art-meta{ display:flex; flex-wrap:wrap; gap:9px 18px; margin-top:22px; font-size:.79rem; color:var(--ink-faint); align-items:center; }
+.art-meta b{ color:var(--ink-soft); font-weight:700; }
+.art-meta .dot{ width:3px; height:3px; border-radius:50%; background:var(--ghost); }
+
+.art-body{ padding:clamp(28px,4vw,46px) 0 clamp(40px,6vw,70px); }
+.art-grid{ display:grid; grid-template-columns:minmax(0,1fr) 250px; gap:clamp(28px,4vw,56px); align-items:start; }
+@media (max-width:980px){ .art-grid{ grid-template-columns:minmax(0,1fr); } .art-toc{ display:none; } }
+
+.art-toc{ position:sticky; top:86px; font-size:.82rem; min-width:0; }
+.art-toc .tt{ font-size:.68rem; font-weight:800; letter-spacing:.11em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:12px; }
+.art-toc a{
+  display:block; color:var(--ink-soft); text-decoration:none; padding:6px 0 6px 13px;
+  border-left:2px solid var(--line); line-height:1.4; transition:color .15s, border-color .15s;
+}
+.art-toc a:hover{ color:var(--teal); border-left-color:var(--teal); }
+.art-toc a.on{ color:var(--teal); border-left-color:var(--teal); font-weight:700; }
+
+/* ---------- prose ---------- */
+.prose{ max-width:none; min-width:0; }
+.prose > *{ max-width:68ch; }
+.prose h2{
+  font-size:clamp(1.42rem,2.9vw,1.95rem); line-height:1.16; font-weight:600; margin:clamp(38px,4.4vw,56px) 0 14px;
+  padding-bottom:11px; border-bottom:2px solid var(--gold); max-width:26ch; scroll-margin-top:90px;
+}
+.prose h2:first-child{ margin-top:0; }
+.prose h3{ font-size:clamp(1.12rem,2vw,1.32rem); line-height:1.25; font-weight:600; margin:32px 0 10px; scroll-margin-top:90px; }
+.prose h4{ font-family:var(--sans); font-size:1rem; font-weight:800; margin:24px 0 8px; color:var(--ink); }
+.prose p{ font-size:1.005rem; line-height:1.72; color:var(--ink-soft); margin:0 0 1.05em; }
+.prose p > strong, .prose li > strong{ color:var(--ink); font-weight:700; }
+.prose a{ color:var(--teal); text-decoration:underline; text-underline-offset:2px; text-decoration-thickness:1px; }
+.prose a:hover{ color:var(--gold); }
+.prose ul, .prose ol{ margin:0 0 1.15em; padding-left:0; list-style:none; }
+.prose ul li{ position:relative; padding-left:24px; margin-bottom:.6em; font-size:1.005rem; line-height:1.68; color:var(--ink-soft); }
+.prose ul li::before{ content:""; position:absolute; left:6px; top:.66em; width:6px; height:6px; border-radius:50%; background:var(--teal); }
+.prose ol{ counter-reset:s; }
+.prose ol li{ position:relative; padding-left:38px; margin-bottom:.82em; font-size:1.005rem; line-height:1.68; color:var(--ink-soft); counter-increment:s; }
+.prose ol li::before{
+  content:counter(s); position:absolute; left:0; top:.06em; width:25px; height:25px; border-radius:50%;
+  background:var(--teal); color:#fff; font-family:var(--sans); font-size:.76rem; font-weight:800;
+  display:flex; align-items:center; justify-content:center;
+}
+@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .prose ol li::before{ color:#08120F; } }
+:root[data-theme="dark"] .prose ol li::before{ color:#08120F; }
+.prose code{
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:.88em;
+  background:var(--teal-tint); color:var(--teal); padding:2px 7px; border-radius:5px;
+  word-break:break-word; border:1px solid var(--line);
+}
+.prose pre{
+  background:var(--sunk); border:1px solid var(--line); border-radius:11px; padding:15px 17px;
+  overflow-x:auto; margin:0 0 1.2em; max-width:68ch;
+}
+.prose pre code{ background:none; border:0; padding:0; font-size:.84rem; color:var(--ink); }
+
+/* source citation */
+.src{
+  display:flex; gap:10px; align-items:baseline; flex-wrap:wrap;
+  border-left:3px solid var(--gold); padding:9px 0 9px 15px; margin:0 0 1.3em;
+  font-size:.83rem; color:var(--ink-faint); line-height:1.5; max-width:68ch;
+}
+.src b{ color:var(--gold); font-weight:800; white-space:nowrap; }
+.src a{ color:var(--teal); word-break:break-word; }
+
+/* callout boxes */
+.cal{ border-radius:13px; padding:17px 20px; margin:0 0 1.45em; border:1px solid var(--line); border-left-width:5px; max-width:68ch; }
+.cal .ch{ font-family:var(--sans); font-weight:800; font-size:.94rem; margin-bottom:8px; display:flex; align-items:center; gap:8px; }
+.cal p{ font-size:.93rem; line-height:1.62; margin:0 0 .6em; color:var(--ink-soft); }
+.cal p:last-child{ margin-bottom:0; }
+.cal.note{ background:var(--teal-tint); border-color:var(--line); border-left-color:var(--teal); }
+.cal.note .ch{ color:var(--teal); }
+.cal.tip{ background:var(--gold-tint); border-color:var(--line); border-left-color:var(--gold); }
+.cal.tip .ch{ color:var(--gold); }
+.cal.warn{ background:var(--warn-bg); border-color:var(--line); border-left-color:var(--warn); }
+.cal.warn .ch{ color:var(--warn); }
+:root{ --warn:#B03A3A; --warn-bg:#FBECEC; }
+@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){ --warn:#E88C8C; --warn-bg:#241718; } }
+:root[data-theme="dark"]{ --warn:#E88C8C; --warn-bg:#241718; }
+
+/* ---------- FIGURES (native HTML, theme aware) ---------- */
+.fig{
+  margin:clamp(26px,3.4vw,38px) 0; max-width:none; border:1px solid var(--line);
+  border-radius:15px; overflow:hidden; background:var(--card); box-shadow:var(--shadow);
+}
+.fig-hd{
+  background:var(--fig-hd); padding:16px 20px; display:flex; align-items:baseline; gap:14px; flex-wrap:wrap;
+}
+.fig-hd .t{ font-family:var(--serif); font-weight:700; font-size:1.06rem; color:var(--fig-hd-t); line-height:1.25; letter-spacing:-.01em; }
+.fig-hd .s{ font-size:.76rem; color:var(--fig-hd-s); font-weight:600; margin-left:auto; }
+@media (max-width:560px){ .fig-hd .s{ margin-left:0; flex-basis:100%; } }
+.fig-bd{ padding:20px; }
+.fig-cap{ font-size:.79rem; color:var(--ink-faint); padding:0 20px 18px; line-height:1.55; }
+.fig-cap b{ color:var(--teal); font-weight:700; }
+:root{ --fig-hd:#0A1F1B; --fig-hd-t:#FFFFFF; --fig-hd-s:#7FB8AB; --fig-sunk:#F3F7F5; --fig-bar:#EDF3F1; }
+@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){
+  --fig-hd:#0A1512; --fig-hd-t:#EAF1EC; --fig-hd-s:#5F998C; --fig-sunk:#111A17; --fig-bar:#1A2521; } }
+:root[data-theme="dark"]{ --fig-hd:#0A1512; --fig-hd-t:#EAF1EC; --fig-hd-s:#5F998C; --fig-sunk:#111A17; --fig-bar:#1A2521; }
+
+/* bars */
+.f-row{ display:grid; grid-template-columns:minmax(0,180px) minmax(0,1fr) 74px; align-items:center; gap:14px; margin-bottom:11px; }
+.f-row .lb{ font-size:.85rem; color:var(--ink); font-weight:600; text-align:right; line-height:1.3; min-width:0; }
+.f-row .tr{ background:var(--fig-bar); border-radius:6px; height:26px; overflow:hidden; min-width:0; }
+.f-row .bar{ height:100%; border-radius:6px; background:linear-gradient(90deg,var(--teal),#1B8172); }
+.f-row.g .bar{ background:linear-gradient(90deg,#B4801F,#E7B85E); }
+.f-row.m .bar{ background:linear-gradient(90deg,#2E9E8A,#63D2B7); }
+.f-row.d .bar{ background:var(--ghost); }
+.f-row .vl{ font-size:.92rem; font-weight:800; color:var(--ink); font-variant-numeric:tabular-nums; text-align:right; }
+@media (max-width:620px){
+  .f-row{ grid-template-columns:minmax(0,1fr) 64px; gap:8px 10px; margin-bottom:14px; }
+  .f-row .lb{ grid-column:1/-1; text-align:left; font-size:.82rem; }
+  .f-row .tr{ height:22px; }
+}
+
+/* stat cards */
+.f-stats{ display:grid; gap:13px; grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr)); }
+.f-st{ background:var(--fig-sunk); border:1px solid var(--line); border-top:3px solid var(--teal); border-radius:11px; padding:17px 16px 15px; min-width:0; }
+.f-st.g{ border-top-color:var(--gold); } .f-st.m{ border-top-color:#2E9E8A; } .f-st.r{ border-top-color:var(--warn); }
+.f-st .n{ font-family:var(--serif); font-weight:700; font-size:clamp(1.6rem,3.6vw,2.05rem); color:var(--ink); line-height:1; letter-spacing:-.02em; }
+.f-st .k{ font-size:.82rem; color:var(--ink); font-weight:600; margin-top:8px; line-height:1.38; }
+.f-st .sub{ font-size:.72rem; color:var(--ink-faint); margin-top:6px; line-height:1.45; }
+
+/* numbered steps */
+.f-stp{ display:flex; gap:14px; margin-bottom:14px; align-items:flex-start; }
+.f-stp:last-child{ margin-bottom:0; }
+.f-stp .num{ flex:0 0 32px; height:32px; border-radius:50%; background:var(--teal); color:#fff; font-weight:800;
+  font-size:.86rem; display:flex; align-items:center; justify-content:center; }
+.f-stp.g .num{ background:var(--gold); color:#1A140A; }
+.f-stp .tx{ min-width:0; }
+.f-stp .h{ font-size:.96rem; font-weight:700; color:var(--ink); margin-bottom:4px; line-height:1.3; }
+.f-stp .p{ font-size:.87rem; color:var(--ink-soft); line-height:1.6; }
+@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .f-stp .num{ color:#08120F; } }
+:root[data-theme="dark"] .f-stp .num{ color:#08120F; }
+
+/* flow */
+.f-flow{ display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,132px),1fr)); gap:9px; }
+.f-fl{ background:var(--fig-sunk); border:1px solid var(--line); border-radius:10px; padding:14px 12px; text-align:center; min-width:0; }
+.f-fl .i{ font-size:.63rem; font-weight:800; letter-spacing:.09em; color:var(--teal); text-transform:uppercase; margin-bottom:7px; }
+.f-fl .h{ font-size:.87rem; font-weight:700; color:var(--ink); line-height:1.3; margin-bottom:5px; }
+.f-fl .p{ font-size:.75rem; color:var(--ink-soft); line-height:1.45; }
+.f-fl.on{ background:var(--teal); border-color:var(--teal); }
+.f-fl.on .i{ color:var(--gold-on); } .f-fl.on .h{ color:#fff; } .f-fl.on .p{ color:rgba(255,255,255,.85); }
+:root{ --gold-on:#E7B85E; }
+@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){ --gold-on:#2A1F08; }
+  :root:not([data-theme="light"]) .f-fl.on .h{ color:#08120F; }
+  :root:not([data-theme="light"]) .f-fl.on .p{ color:rgba(8,18,15,.8); } }
+:root[data-theme="dark"]{ --gold-on:#2A1F08; }
+:root[data-theme="dark"] .f-fl.on .h{ color:#08120F; }
+:root[data-theme="dark"] .f-fl.on .p{ color:rgba(8,18,15,.8); }
+
+/* table */
+.f-tw{ overflow-x:auto; -webkit-overflow-scrolling:touch; margin:0 -20px; padding:0 20px; }
+.f-tbl{ width:100%; border-collapse:collapse; min-width:520px; }
+.f-tbl th{ background:var(--fig-hd); color:var(--fig-hd-t); font-size:.76rem; font-weight:700; text-align:left; padding:11px 12px; }
+.f-tbl td{ font-size:.84rem; color:var(--ink); padding:10px 12px; border-bottom:1px solid var(--line); line-height:1.45; }
+.f-tbl tr:nth-child(even) td{ background:var(--fig-sunk); }
+.f-tbl td.n{ font-variant-numeric:tabular-nums; font-weight:700; }
+.f-tbl td.g{ color:var(--gold); font-weight:700; }
+.f-tbl td.mono{ font-family:ui-monospace,Menlo,monospace; font-size:.78rem; color:var(--teal); }
+.f-scroll{ font-size:.71rem; color:var(--ink-faint); margin-top:9px; display:none; }
+@media (max-width:640px){ .f-scroll{ display:block; } }
+
+/* pills */
+.pill{ display:inline-block; padding:3px 10px; border-radius:20px; font-size:.7rem; font-weight:700; }
+.pill.a{ background:var(--teal-tint); color:var(--teal); }
+.pill.b{ background:var(--gold-tint); color:var(--gold); }
+.pill.c{ background:var(--warn-bg); color:var(--warn); }
+.pill.d{ background:var(--sunk); color:var(--ink-faint); }
+
+/* ui mock */
+.f-ui{ border:1px solid var(--line); border-radius:11px; overflow:hidden; background:var(--card); }
+.f-ui .bar2{ background:var(--fig-bar); border-bottom:1px solid var(--line); padding:8px 13px; display:flex; align-items:center; gap:6px; }
+.f-ui .dot{ width:9px; height:9px; border-radius:50%; background:var(--ghost); flex:0 0 auto; }
+.f-ui .url{ margin-left:9px; background:var(--card); border:1px solid var(--line); border-radius:6px; padding:4px 11px;
+  font-size:.72rem; color:var(--ink-faint); font-family:ui-monospace,Menlo,monospace;
+  overflow:hidden; text-overflow:ellipsis; white-space:nowrap; min-width:0; }
+.f-ui .inr{ padding:16px 17px; }
+.f-uih{ display:flex; align-items:center; gap:9px; margin-bottom:13px; padding-bottom:11px; border-bottom:1px solid var(--line); flex-wrap:wrap; }
+.f-uih .lg{ width:22px; height:22px; border-radius:6px; background:var(--teal); flex:0 0 auto; }
+.f-uih .nm{ font-size:.92rem; font-weight:700; color:var(--ink); }
+.f-uih .rt{ margin-left:auto; font-size:.73rem; color:var(--ink-faint); }
+.fld{ margin-bottom:11px; }
+.fld .lab{ font-size:.68rem; font-weight:800; color:var(--ink-soft); margin-bottom:5px; text-transform:uppercase; letter-spacing:.06em; }
+.fld .inp{ border:1.5px solid var(--line); border-radius:8px; padding:9px 12px; font-size:.86rem; color:var(--ink); background:var(--card); line-height:1.5; }
+.fld .inp.hi{ border-color:var(--gold); background:var(--gold-tint); font-weight:600; }
+.fld .inp.mono{ font-family:ui-monospace,Menlo,monospace; font-size:.79rem; color:var(--teal); word-break:break-all; }
+.hint{ font-size:.71rem; color:var(--ink-faint); margin-top:5px; line-height:1.45; }
+.fbtn{ display:inline-block; background:var(--teal); color:#fff; font-size:.82rem; font-weight:700; padding:9px 18px; border-radius:8px; }
+.fbtn.g{ background:var(--gold); color:#1A140A; } .fbtn.o{ background:transparent; color:var(--teal); border:1.5px solid var(--teal); }
+@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .fbtn{ color:#08120F; } }
+:root[data-theme="dark"] .fbtn{ color:#08120F; }
+
+/* two column compare */
+.f-two{ display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr)); gap:15px; }
+.f-pane{ border:1px solid var(--line); border-radius:11px; overflow:hidden; min-width:0; }
+.f-pane .ph{ padding:10px 15px; font-size:.75rem; font-weight:800; letter-spacing:.03em; text-transform:uppercase; line-height:1.35; }
+.f-pane.bad .ph{ background:var(--warn-bg); color:var(--warn); }
+.f-pane.good .ph{ background:var(--teal-tint); color:var(--teal); }
+.f-pane .pb{ padding:14px 15px; }
+.f-pane ul{ margin:0; padding:0; list-style:none; }
+.f-pane li{ font-size:.85rem; color:var(--ink); line-height:1.5; margin-bottom:9px; padding-left:20px; position:relative; }
+.f-pane li:last-child{ margin-bottom:0; }
+.f-pane.bad li::before{ content:"\2715"; position:absolute; left:0; color:var(--warn); font-weight:800; }
+.f-pane.good li::before{ content:"\2713"; position:absolute; left:0; color:var(--teal); font-weight:800; }
+
+/* tiers */
+.f-tier{ border-radius:10px; padding:14px 18px; margin-bottom:8px; display:grid; grid-template-columns:minmax(0,165px) minmax(0,1fr); gap:15px; align-items:center; }
+.f-tier:last-child{ margin-bottom:0; }
+.f-tier .tl{ font-size:.96rem; font-weight:800; color:#fff; }
+.f-tier .td{ font-size:.84rem; line-height:1.5; color:rgba(255,255,255,.9); }
+.f-tier .td b{ color:#fff; }
+@media (max-width:620px){ .f-tier{ grid-template-columns:minmax(0,1fr); gap:6px; } }
+
+/* list cards */
+.f-lc{ background:var(--fig-sunk); border:1px solid var(--line); border-left:4px solid var(--teal); border-radius:0 10px 10px 0; padding:15px 18px; margin-bottom:10px; }
+.f-lc:last-child{ margin-bottom:0; }
+.f-lc.g{ border-left-color:var(--gold); background:var(--gold-tint); }
+.f-lc .h{ font-size:.94rem; font-weight:700; color:var(--ink); margin-bottom:5px; line-height:1.3; }
+.f-lc .p{ font-size:.85rem; color:var(--ink-soft); line-height:1.6; }
+.f-lc .p b{ color:var(--teal); }
+
+/* matrix */
+.f-mx{ display:grid; gap:6px; min-width:0; }
+.f-mx .c{ border-radius:7px; padding:10px 8px; font-size:.78rem; font-weight:600; text-align:center; line-height:1.3; }
+.f-mx .hdr{ background:var(--fig-hd); color:var(--fig-hd-t); font-weight:700; font-size:.72rem; }
+.f-mx .side{ background:var(--teal); color:#fff; font-weight:700; font-size:.72rem; text-align:left; padding-left:12px; }
+.f-mx .y{ background:var(--teal-tint); color:var(--teal); }
+.f-mx .m{ background:var(--gold-tint); color:var(--gold); }
+.f-mx .n2{ background:var(--sunk); color:var(--ink-faint); }
+@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .f-mx .side{ color:#08120F; } }
+:root[data-theme="dark"] .f-mx .side{ color:#08120F; }
+@media (max-width:620px){ .f-mx .c{ font-size:.66rem; padding:8px 4px; } .f-mx .side{ padding-left:7px; } }
+
+/* timeline */
+.f-tl .r{ display:grid; grid-template-columns:82px minmax(0,1fr); gap:16px; padding-bottom:18px; }
+.f-tl .r:last-child{ padding-bottom:0; }
+.f-tl .wk{ font-size:.79rem; font-weight:800; color:var(--gold); text-align:right; padding-top:2px; }
+.f-tl .bx{ border-left:2px solid var(--line); padding-left:19px; position:relative; min-width:0; }
+.f-tl .r:last-child .bx{ border-left-color:transparent; }
+.f-tl .bx::before{ content:""; position:absolute; left:-6px; top:4px; width:10px; height:10px; border-radius:50%;
+  background:var(--teal); border:2px solid var(--card); box-shadow:0 0 0 2px var(--teal); }
+.f-tl .h{ font-size:.94rem; font-weight:700; color:var(--ink); margin-bottom:3px; }
+.f-tl .p{ font-size:.85rem; color:var(--ink-soft); line-height:1.55; }
+@media (max-width:560px){ .f-tl .r{ grid-template-columns:minmax(0,1fr); gap:4px; } .f-tl .wk{ text-align:left; }
+  .f-tl .bx{ border-left:0; padding-left:0; } .f-tl .bx::before{ display:none; } }
+
+/* key/value */
+.f-kv{ display:grid; grid-template-columns:minmax(0,170px) minmax(0,1fr); gap:9px 16px; font-size:.86rem; }
+.f-kv .k{ color:var(--ink-faint); font-weight:700; }
+.f-kv .v{ color:var(--ink); font-weight:600; line-height:1.45; }
+@media (max-width:560px){ .f-kv{ grid-template-columns:minmax(0,1fr); gap:3px 0; }
+  .f-kv .k{ margin-top:9px; } .f-kv .k:first-child{ margin-top:0; } }
+
+/* figure note strip */
+.f-note{ background:var(--gold-tint); border:1px solid var(--line); border-radius:9px; padding:13px 16px; margin-top:15px;
+  font-size:.82rem; color:var(--ink-soft); line-height:1.6; }
+.f-note b{ color:var(--gold); }
+.f-legend{ display:flex; gap:16px; margin-top:14px; font-size:.75rem; color:var(--ink-soft); flex-wrap:wrap; }
+.f-legend i{ display:inline-block; width:11px; height:11px; border-radius:3px; margin-right:6px; vertical-align:-1px; font-style:normal; }
+
+/* ---------- inline CTA block ---------- */
+.acta{
+  background:var(--teal-deep-fixed); border-radius:15px; padding:clamp(22px,3.2vw,30px);
+  margin:clamp(30px,4vw,44px) 0; border-top:4px solid var(--gold); max-width:68ch; box-shadow:var(--lift);
+}
+:root{ --teal-deep-fixed:#0A3F38; }
+@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){ --teal-deep-fixed:#0B1714; } }
+:root[data-theme="dark"]{ --teal-deep-fixed:#0B1714; }
+.acta h3{ font-family:var(--serif); font-size:clamp(1.2rem,2.3vw,1.45rem); color:#fff; font-weight:600; line-height:1.2; margin:0 0 10px; }
+.acta p{ font-size:.92rem; color:#B7CDC5; line-height:1.62; margin:0 0 17px; max-width:56ch; }
+.acta .btn{ font-size:.9rem; }
+.acta .fine{ margin-top:12px; font-size:.74rem; color:#7FB8AB; }
+@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .acta{ border:1px solid var(--line); border-top:4px solid var(--gold); } }
+:root[data-theme="dark"] .acta{ border:1px solid var(--line); border-top:4px solid var(--gold); }
+
+/* ---------- article footer nav ---------- */
+.art-next{ border-top:1px solid var(--line); padding-top:clamp(28px,4vw,40px); margin-top:clamp(34px,4.5vw,52px); }
+.art-next .tt{ font-size:.68rem; font-weight:800; letter-spacing:.11em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:18px; }
+.next-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,235px),1fr)); gap:13px; }
+
+/* ---------- blog + case study cards ---------- */
+.card-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr)); gap:clamp(14px,2vw,20px); }
+.pcard{
+  display:flex; flex-direction:column; background:var(--card); border:1px solid var(--line); border-radius:15px;
+  overflow:hidden; text-decoration:none; min-width:0; transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  box-shadow:var(--shadow);
+}
+.pcard:hover{ transform:translateY(-3px); box-shadow:var(--lift); border-color:var(--teal); }
+.pcard .thumb{ aspect-ratio:16/9; background:linear-gradient(145deg,var(--thumb-a),var(--thumb-b));
+  position:relative; overflow:hidden; display:flex; flex-direction:column; justify-content:center; padding:20px 22px;
+  border-bottom:1px solid var(--thumb-edge); }
+:root{ --thumb-a:#0A1F1B; --thumb-b:#123029; --thumb-edge:transparent; }
+@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){ --thumb-a:#13221D; --thumb-b:#0C1714; --thumb-edge:var(--line); } }
+:root[data-theme="dark"]{ --thumb-a:#13221D; --thumb-b:#0C1714; --thumb-edge:var(--line); }
+.pcard .thumb .pt{ font-family:var(--serif); font-size:1.14rem; font-weight:700; color:#fff; line-height:1.22; letter-spacing:-.01em; }
+.pcard .thumb .pn{ font-size:.65rem; font-weight:800; letter-spacing:.13em; text-transform:uppercase; color:var(--gold-on2); margin-bottom:9px; }
+:root{ --gold-on2:#E7B85E; }
+.pcard .thumb::after{ content:""; position:absolute; right:-40px; bottom:-40px; width:150px; height:150px; border-radius:50%;
+  background:radial-gradient(circle,rgba(99,210,183,.16),transparent 70%); }
+.pcard .body{ padding:18px 20px 20px; display:flex; flex-direction:column; gap:9px; flex:1; }
+.pcard .body h3{ font-family:var(--sans); font-size:1rem; font-weight:800; color:var(--ink); line-height:1.3; }
+.pcard .body p{ font-size:.86rem; color:var(--ink-soft); line-height:1.58; margin:0; flex:1; }
+.pcard .fm{ display:flex; gap:6px 12px; flex-wrap:wrap; font-size:.73rem; color:var(--ink-faint); align-items:center; margin-top:2px; }
+.pcard .fm span:first-child{ font-weight:700; color:var(--ink-soft); }
+.pcard .go{ font-size:.82rem; font-weight:800; color:var(--teal); display:flex; align-items:center; gap:6px; }
+.pcard:hover .go{ color:var(--gold); }
+
+/* ---------- homepage blog carousel ---------- */
+.car-sec{ background:var(--sunk); }
+.car-head{ display:flex; align-items:flex-end; justify-content:space-between; gap:18px; flex-wrap:wrap; margin-bottom:clamp(20px,3vw,30px); }
+.car-head .shead{ margin-bottom:0; }
+.car-wrap{ position:relative; }
+.car-track{
+  display:grid; grid-auto-flow:column; grid-auto-columns:minmax(276px,1fr);
+  gap:15px; overflow-x:auto; scroll-snap-type:x mandatory; scroll-behavior:smooth;
+  padding-bottom:6px; scrollbar-width:thin;
+}
+@media (min-width:1000px){ .car-track{ grid-auto-columns:minmax(0,1fr); overflow-x:visible; } }
+.car-track > *{ scroll-snap-align:start; }
+.car-track::-webkit-scrollbar{ height:6px; }
+.car-track::-webkit-scrollbar-thumb{ background:var(--ghost); border-radius:3px; }
+.car-track::-webkit-scrollbar-track{ background:transparent; }
+.car-nav{ display:flex; gap:8px; }
+@media (min-width:1000px){ .car-nav{ display:none; } }
+.car-btn{
+  width:38px; height:38px; border-radius:50%; border:1px solid var(--line); background:var(--card);
+  color:var(--ink); display:flex; align-items:center; justify-content:center; cursor:pointer; flex:0 0 auto;
+}
+.car-btn:hover{ border-color:var(--teal); color:var(--teal); }
+.car-btn:disabled{ opacity:.35; cursor:default; }
+.car-hint{ font-size:.74rem; color:var(--ink-faint); margin-top:12px; }
+@media (min-width:1000px){ .car-hint{ display:none; } }
+
+/* ---------- index page hero ---------- */
+.ix-hero{ padding:clamp(44px,6vw,72px) 0 clamp(26px,3.6vw,38px); }
+.ix-hero h1{ font-size:clamp(2rem,4.6vw,3.15rem); line-height:1.06; font-weight:600; max-width:17ch; letter-spacing:-.017em; }
+.ix-hero .dek{ margin-top:16px; font-size:clamp(1rem,1.4vw,1.14rem); color:var(--ink-soft); max-width:58ch; line-height:1.62; }
+.ix-stats{ display:flex; gap:clamp(20px,4vw,44px); flex-wrap:wrap; margin-top:26px; }
+.ix-stats div b{ font-family:var(--serif); font-size:1.45rem; font-weight:700; color:var(--ink); display:block; font-variant-numeric:tabular-nums; }
+.ix-stats div span{ font-size:.76rem; color:var(--ink-faint); }
+
+/* ---------- misc ---------- */
+.mt0{ margin-top:0; }
+.hr{ border:0; border-top:1px solid var(--line); margin:clamp(30px,4vw,44px) 0; }
+
+/* ---------- masthead normalisation (identical on every page) ---------- */
+.masthead{ position:sticky; top:0; z-index:60; border-bottom:1px solid var(--line);
+  background:color-mix(in srgb, var(--paper) 92%, transparent); backdrop-filter:blur(8px); }
+.mast-in{ display:flex; align-items:center; gap:12px; min-height:64px; padding-block:11px; }
+.brand{ display:flex; align-items:center; gap:10px; text-decoration:none; flex:0 0 auto; }
+.brand:hover{ text-decoration:none; }
+.brand span{ font-family:var(--sans); font-weight:800; font-size:.94rem; color:var(--ink);
+  letter-spacing:-.01em; text-decoration:none; white-space:nowrap; }
+.brand span b{ color:var(--teal); font-weight:800; }
+
+/* ============================================================
+   ACCESSIBILITY CORRECTIONS
+   Every value below was measured against its real background and
+   raised to at least the WCAG AA 4.5:1 ratio for body text.
+   ============================================================ */
+
+/* 1. The faint text colour failed on every light surface (3.0 to 3.6:1).
+      Darkened to clear 4.5:1 on paper, card, sunk and tint alike. */
+:root{ --ink-faint:#5B6D64; }
+
+/* 2. Gold needs two values: one to fill with, one to write with.
+      #A9761E as text only reached 3.3:1 on the gold tint. */
+:root{ --gold-ink:#8A5F14; --gold-bright:#E3B45C; }
+@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){ --gold-ink:#E3B45C; --gold-bright:#E3B45C; } }
+:root[data-theme="dark"]{ --gold-ink:#E3B45C; --gold-bright:#E3B45C; }
+
+.eyebrow{ color:var(--teal); }
+.gb .eyebrow{ color:var(--gold-bright); }          /* gold on the deep teal panel */
+.src b{ color:var(--gold-ink); }
+.cal.tip .ch{ color:var(--gold-ink); }
+.cal.warn .ch{ color:var(--warn); }
+.f-note b{ color:var(--gold-ink); }
+.f-tbl td.g{ color:var(--gold-ink); }
+.f-tl .wk{ color:var(--gold-ink); }
+.f-lc.g{ border-left-color:var(--gold-ink); }
+.pill.b{ background:var(--gold-tint); color:var(--gold-ink); }
+.rtag.nda, .node-m, .ba-when{ color:var(--gold-ink); }
+.tbadge{ color:#fff; }
+.pcard .thumb .pn{ color:var(--gold-bright); }     /* always sits on a dark thumb */
+.acta .fine{ color:#9FC4BA; }
+
+/* 3. Inside .prose, `a { color:var(--teal) }` was beating `.btn-primary`,
+      so the gold CTA buttons rendered teal-on-gold at 1.96:1. */
+.prose a.btn{ color:#1A140A; text-decoration:none; }
+.prose a.btn:hover{ color:#1A140A; }
+.prose a.btn-ghost{ color:var(--ink); }
+
+/* 4. The dark-theme override for filled buttons was also hitting the
+      outline variant, painting near-black text on a transparent panel. */
+.fbtn.o{ background:transparent; color:var(--teal); border:1.5px solid var(--teal); }
+@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .fbtn.o{ color:var(--teal); } }
+:root[data-theme="dark"] .fbtn.o{ color:var(--teal); }
+
+/* 5. Slightly larger minimum type for the smallest labels, which were
+      sitting at 10 to 11px on mobile. */
+@media (max-width:620px){
+  .fig-cap, .f-note, .hint, .art-meta, .crumb, .pcard .fm{ font-size:.8rem; }
+  .f-st .sub{ font-size:.76rem; }
+}
+
+.foot{ border-top:1px solid var(--line); background:var(--sunk); padding:clamp(30px,4vw,44px) 0; margin-top:0; }
+.foot-in{ display:flex; align-items:center; gap:18px 28px; flex-wrap:wrap; }
+.foot-brand{ display:flex; align-items:center; gap:9px; }
+.foot-brand span{ font-family:var(--sans); font-weight:800; font-size:.88rem; color:var(--ink); }
+.foot-nav{ display:flex; gap:18px; flex-wrap:wrap; margin-left:auto; }
+.foot-nav a{ font-size:.85rem; color:var(--ink-soft); text-decoration:none; font-weight:600; }
+.foot-nav a:hover{ color:var(--teal); text-decoration:underline; }
+.foot-fine{ font-size:.75rem; color:var(--ink-faint); flex-basis:100%; }
+.mark-logo{ width:34px; height:34px; border-radius:8px; flex:0 0 auto; }
+
+</style>
+<meta content="bg_BG" property="og:locale"/><meta content="en_US" property="og:locale:alternate"/><style id="v3">/* v3: language switch, Bulgarian fonts, new article components */
+.lang{ display:inline-flex; align-items:center; gap:2px; padding:2px; border:1px solid var(--line); border-radius:999px; flex:0 0 auto; }
+.lang a{ font-family:var(--sans); font-weight:800; font-size:.68rem; letter-spacing:.08em; line-height:1; color:var(--ink-faint); text-decoration:none; padding:6px 8px; border-radius:999px; }
+.lang a:hover{ color:var(--ink); background:var(--sunk); }
+.lang a[aria-current="true"]{ background:var(--teal); color:#fff; }
+.foot-nav .lang{ margin-left:4px; }
+html[lang="bg"]{ --serif:"Lora","Iowan Old Style",Georgia,serif; --sans:"Inter","Segoe UI",-apple-system,BlinkMacSystemFont,sans-serif; }
+html[lang="bg"] h1{ letter-spacing:-.01em; }
+@media (max-width:560px){ .mast-nav .lang a{ padding:5px 6px; } }
+.qa-box{ margin:clamp(22px,3vw,30px) 0; padding:18px 20px; border:1px solid var(--line); border-left:4px solid var(--teal); border-radius:0 12px 12px 0; background:var(--teal-tint); }
+.qa-k, .kt-k, .pf-k, .ak{ font-family:var(--sans); font-size:.7rem; font-weight:800; letter-spacing:.13em; text-transform:uppercase; color:var(--teal); margin-bottom:8px; }
+.qa-box p{ margin:0; font-size:1.02rem; line-height:1.62; color:var(--ink); }
+.kt-box{ margin:clamp(22px,3vw,30px) 0; padding:18px 20px 8px; border:1px solid var(--line); border-top:4px solid var(--gold); border-radius:12px; background:var(--card); box-shadow:var(--shadow); }
+.kt-box .kt-k{ color:var(--gold-ink); }
+.kt-box ul{ margin:0 0 10px; padding-left:1.15em; }
+.kt-box li{ margin-bottom:.55em; line-height:1.55; }
+.f-cols{ display:grid; grid-template-columns:repeat(var(--n),minmax(0,1fr)); gap:10px; align-items:end; height:230px; padding-top:6px; }
+.f-cols .c{ display:flex; flex-direction:column; justify-content:flex-end; align-items:stretch; height:100%; min-width:0; text-align:center; }
+.f-cols .v{ font-size:.82rem; font-weight:800; color:var(--ink); margin-bottom:6px; font-variant-numeric:tabular-nums; }
+.f-cols .b{ background:linear-gradient(180deg,#1B8172,var(--teal)); border-radius:7px 7px 3px 3px; min-height:4px; }
+.f-cols .c:last-child .b{ background:linear-gradient(180deg,#E7B85E,#B4801F); }
+.f-cols .l{ font-size:.74rem; color:var(--ink-faint); margin-top:7px; line-height:1.3; }
+.f-ck{ list-style:none; margin:0; padding:0; display:grid; gap:10px; }
+.f-ck li{ position:relative; padding-left:32px; font-size:.92rem; line-height:1.55; color:var(--ink-soft); }
+.f-ck li::before{ content:""; position:absolute; left:0; top:1px; width:20px; height:20px; border-radius:6px; border:2px solid var(--teal); background:var(--teal-tint); }
+.f-ck li::after{ content:""; position:absolute; left:7px; top:4px; width:6px; height:11px; border:solid var(--teal); border-width:0 2.5px 2.5px 0; transform:rotate(45deg); }
+.chat-q{ margin:4px 0 14px auto; max-width:82%; background:var(--teal); color:#fff; padding:11px 14px; border-radius:14px 14px 4px 14px; font-size:.9rem; line-height:1.5; width:fit-content; }
+.chat-a{ background:var(--fig-sunk); border:1px solid var(--line); border-radius:14px 14px 14px 4px; padding:12px 15px; font-size:.88rem; line-height:1.55; color:var(--ink-soft); }
+.chat-a p{ margin:0 0 .6em; font-size:.88rem; }
+.chat-a p:last-child{ margin:0; }
+.rv-h{ display:flex; align-items:center; gap:10px; margin-bottom:10px; }
+.rv-av{ width:34px; height:34px; border-radius:50%; background:var(--teal-tint); color:var(--teal); font-weight:800; display:flex; align-items:center; justify-content:center; flex:0 0 auto; }
+.rv-h b{ font-size:.9rem; color:var(--ink); }
+.rv-m{ font-size:.76rem; color:var(--ink-faint); }
+.rv-h .rt{ margin-left:auto; font-size:.72rem; color:var(--ink-faint); }
+.stars{ color:#E2A82B; letter-spacing:1px; margin-right:6px; }
+.stars i{ font-style:normal; color:var(--ghost); }
+.rv-t{ font-size:.9rem; line-height:1.55; margin:0 0 12px; color:var(--ink); }
+.rv-reply{ border-left:3px solid var(--teal); background:var(--fig-sunk); border-radius:0 10px 10px 0; padding:10px 13px; }
+.rv-reply.bad{ border-left-color:var(--warn); }
+.rv-rk{ font-size:.74rem; font-weight:700; color:var(--ink-faint); margin-bottom:6px; display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+.rv-reply p{ margin:0; font-size:.88rem; line-height:1.55; color:var(--ink-soft); }
+.rv-badge{ font-size:.66rem; font-weight:800; letter-spacing:.06em; text-transform:uppercase; padding:3px 8px; border-radius:20px; }
+.rv-badge.good{ background:var(--teal-tint); color:var(--teal); }
+.rv-badge.bad{ background:var(--warn-bg); color:var(--warn); }
+.proof{ margin:clamp(26px,3.4vw,38px) 0; padding:clamp(20px,3vw,28px); border-radius:15px; background:var(--card); border:1px solid var(--line); border-left:5px solid var(--gold); box-shadow:var(--shadow); }
+.proof .pf-k{ color:var(--gold-ink); }
+.proof h3{ font-family:var(--serif); font-size:clamp(1.15rem,2.2vw,1.4rem); margin:0 0 8px; line-height:1.25; }
+.proof p{ margin:0 0 14px; }
+.pf-stats{ display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,140px),1fr)); gap:10px; margin-bottom:14px; }
+.pf-stats div{ background:var(--fig-sunk); border:1px solid var(--line); border-radius:10px; padding:12px 13px; }
+.pf-stats b{ display:block; font-family:var(--serif); font-size:1.5rem; line-height:1.05; color:var(--ink); }
+.pf-stats span{ display:block; font-size:.76rem; color:var(--ink-faint); margin-top:5px; line-height:1.35; }
+.pf-go{ font-weight:800; font-size:.88rem; color:var(--teal); text-decoration:none; display:inline-flex; align-items:center; gap:6px; }
+.faq{ margin:10px 0 26px; border-top:1px solid var(--line); }
+.faq details{ border-bottom:1px solid var(--line); }
+.faq summary{ cursor:pointer; list-style:none; padding:15px 34px 15px 0; position:relative; font-weight:700; color:var(--ink); line-height:1.4; }
+.faq summary::-webkit-details-marker{ display:none; }
+.faq summary::after{ content:"+"; position:absolute; right:6px; top:12px; font-size:1.3rem; color:var(--teal); font-weight:600; }
+.faq details[open] summary::after{ content:"\2212"; }
+.faq .fa{ padding:0 0 16px; color:var(--ink-soft); line-height:1.65; font-size:.96rem; }
+.refs{ font-size:.84rem; color:var(--ink-faint); padding-left:1.4em; line-height:1.55; }
+.refs li{ margin-bottom:.5em; }
+.refs a{ color:var(--ink-faint); word-break:break-all; }
+.author-box{ display:grid; grid-template-columns:64px minmax(0,1fr); gap:16px; align-items:start; margin:30px 0; padding:20px; border:1px solid var(--line); border-radius:15px; background:var(--card); }
+.author-box img{ width:64px; height:64px; border-radius:50%; object-fit:cover; }
+.author-box b{ display:block; font-family:var(--serif); font-size:1.1rem; margin-bottom:4px; color:var(--ink); }
+.author-box p{ font-size:.9rem; margin:0 0 8px; line-height:1.55; }
+.author-box a{ font-weight:800; font-size:.86rem; color:var(--teal); text-decoration:none; display:inline-flex; gap:6px; align-items:center; }
+@media (max-width:600px){ .f-cols{ height:200px; gap:6px; } .f-cols .l{ font-size:.66rem; } .f-cols .v{ font-size:.72rem; } }
+.prose .f-pane li{ font-size:.85rem; padding-left:20px; line-height:1.5; color:var(--ink); margin-bottom:9px; }
+.prose .f-pane li::before{ width:auto; height:auto; background:none; border-radius:0; top:0; left:0; }
+.prose ul.f-ck li{ padding-left:32px; font-size:.92rem; line-height:1.55; margin-bottom:0; }
+.prose ul.f-ck li::before{ left:0; top:1px; width:20px; height:20px; border-radius:6px; border:2px solid var(--teal); background:var(--teal-tint); box-sizing:border-box; }
+.prose .kt-box ul li{ margin-bottom:.55em; }
+.prose ol.refs li{ padding-left:30px; font-size:.84rem; line-height:1.55; color:var(--ink-faint); }
+.mast-nav .btn-sm{ white-space:nowrap; }
+@media (max-width:480px){
+  .mast-nav .lang{ border:0; padding:0; }
+  .mast-nav .lang a[aria-current="true"]{ display:none; }
+  .mast-nav .lang a{ border:1px solid var(--line); padding:6px 8px; }
+  .mast-nav .btn-sm{ padding:10px 13px; font-size:.78rem; }
+}
+@media (max-width:380px){ .mast-in{ gap:8px; } .mast-nav .btn-sm{ padding:9px 11px; font-size:.76rem; } }
+</style><link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/></head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-M9N9HKLD" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="masthead">
+<div class="wrap mast-in">
+<a aria-label="Dental Marketing, начална страница" class="brand" href="/bg">
+<img alt="" class="mark-logo" height="34" src="data:image/png;base64,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" width="34"/>
+<span>dental-marketing<b>.org</b></span>
+</a>
+<nav aria-label="Основна навигация" class="mast-nav">
+<a aria-current="page" class="navlink" href="/bg/blog">Блог</a> <a class="navlink" href="/bg/case-studies">Казуси</a> <div aria-label="Език" class="lang" role="group"><a href="/blog/dental-seo-tracking-ga4-search-console-tag-manager" hreflang="en" lang="en">EN</a><a aria-current="true" href="/bg/blog/dental-seo-tracking-ga4-search-console-tag-manager" hreflang="bg" lang="bg">BG</a></div><a class="btn btn-primary btn-sm" href="https://calendly.com/maxlezginov/free-marketing-consultation" rel="noopener" target="_blank">Запазете разговор</a>
+</nav>
+</div>
+</header>
+<div class="sticky">
+<div class="wrap sticky-in">
+<div class="msg">20 запитвания от нови пациенти за 90 дни.<small>Безплатен 30-минутен разговор. Ще ви кажа реалната цифра за вашия пазар.</small></div>
+<a class="btn btn-primary btn-sm" href="https://calendly.com/maxlezginov/free-marketing-consultation" rel="noopener" target="_blank">Запазете разговор</a>
+</div>
+</div>
+<main id="top">
+<section class="art-hero">
+<div class="wrap">
+<nav aria-label="Навигационна пътека" class="crumb">
+<a href="/bg">Начало</a><span>›</span><a href="/bg/blog">Ръководства</a><span>›</span>Измерване
+      </nav>
+<span class="eyebrow">Част първа · Измерване</span>
+<h1>Как наистина да измервате маркетинга на денталната си практика</h1>
+<p class="art-dek">Настройка стъпка по стъпка на Google Analytics 4, Search Console, Bing Webmaster Tools и Google Tag Manager, написана за собственици на практики, които не пишат код. Плюс логиката на събитията, която превръща натисканията на телефонния номер и изпратените форми в числа, по които можете да действате.</p>
+<div class="art-meta">
+<span><b>21 мин. четене</b></span><span class="dot"></span> <span>Не са нужни технически познания</span><span class="dot"></span> <span>Само безплатни инструменти</span><span class="dot"></span> <span>Обновено през септември 2026 г.</span>
+</div>
+</div>
+</section>
+<div class="art-body">
+<div class="wrap art-grid">
+<article class="prose">
+<h2 id="the-problem-you-are-paying-for-marketing-you-cannot-see">Проблемът: плащате за маркетинг, който не виждате</h2>
+<p>Ето един разговор, който се случва в денталните практики всеки месец.</p>
+<p>Собственикът на практиката пита маркетинговата фирма как вървят нещата. Фирмата изпраща отчет. В отчета има трафик, показвания и един ред за подобряващо се класиране. Собственикът го разглежда, не може да свърже нищо от това с пациентите, които реално са влезли през вратата, и го прибира в папката. Следващия месец се случва същото.</p>
+<p>В този разговор никой не лъже. Проблемът е, че отчетът измерва грешното нещо, а го измерва, защото правилното нещо така и не е било настроено.</p>
+<p>Правилното нещо е лесно за формулиране. Когато някой намери практиката ви онлайн и се опита да се свърже с вас, този момент трябва да бъде записан. Не посещението. Не показването на страницата. Моментът, в който натисне телефонния ви номер, изпрати формата ви за записване на час или кликне върху имейл адреса ви. Това е единственото събитие в цялата фуния, което е пряко свързано с приходите, а в повечето практики то е напълно невидимо.</p>
+<figure class="fig" id="fig-v01">
+<div class="fig-hd"><div class="t">Защо повечето дентални практики не могат да ви кажат какво е постигнал маркетингът им</div></div>
+<div class="fig-bd"><div class="f-stats"><div class="f-st"><div class="n">54%</div><div class="k">от сайтовете на местни бизнеси нямат настроени никакви цели за конверсия</div><div class="sub">BrightLocal, 11 016 сайта на местни бизнеси</div></div><div class="f-st g"><div class="n">89%</div><div class="k">от тези, които имат цели, са им задали стойност нула</div><div class="sub">Същото проучване</div></div><div class="f-st m"><div class="n">44%</div><div class="k">от потребителите на здравни услуги предпочитат да се обадят, вместо да попълват форма</div><div class="sub">Invoca Healthcare Consumer Experience Report, 2026</div></div></div></div>
+<figcaption class="fig-cap">Ако телефонът е основният начин, по който пациентите се свързват с вас, а телефонът не се измерва, значи по-голямата част от резултата от маркетинга ви е невидима.</figcaption>
+</figure>
+<div class="src"><b>Източник</b><span>BrightLocal, Google Analytics for Local Businesses Study, анализирани 11 016 сайта на местни бизнеси · <a href="https://www.brightlocal.com/research/google-analytics-for-local-businesses-study/" rel="noopener nofollow" target="_blank">www.brightlocal.com/research/google-analytics-for-local-busine…</a></span></div>
+<p>Първото число си струва да го осмислите. Повече от половината сайтове на местни бизнеси нямат никакво проследяване на конверсиите. Не лошо настроено проследяване. Никакво. Това означава, че тези бизнеси с години вземат маркетингови решения въз основа на число за трафика, което не им казва нищо за това дали телефонът е звъннал.</p>
+<p>За дентална практика това е по-лошо от средното, защото основният начин, по който пациентите се свързват с дентална практика, е телефонът. През май 2026 г. Invoca анкетира потребители на здравни услуги и установи, че 44 процента предпочитат да се обадят, когато имат нужда от помощ, което е най-високият дял сред всички тествани канали, а 85 процента ще отидат при по-бърз конкурент, ако се свързват с вас бавно.</p>
+<div class="src"><b>Източник</b><span>Invoca, Healthcare Consumer Experience Report 2026 · <a href="https://www.invoca.com/reports/healthcare-consumer-experience-report-2026" rel="noopener nofollow" target="_blank">www.invoca.com/reports/healthcare-consumer-experience-report-2…</a></span></div>
+<p>Значи най-важното действие на пациента е натискането на телефонния номер, а Google Analytics не записва такива натискания, освен ако сами не изградите това. Това ръководство показва как да го изградите.</p>
+<aside class="cal note"><div class="ch">Какво ще направи това ръководство и какво не</div><p>Ще ви доведе до състояние, в което всяко натискане на телефонния номер, всеки клик върху имейла и всяка изпратена форма на сайта ви се записват, приписват се на канала, който ги е донесъл, и се виждат на една страница.</p><p>Няма да ви каже дали обаждането е довело до записан час. За това е нужен софтуер за проследяване на обажданията, което е отделен разговор и отделен разход. Бъдете честни със себе си за разликата между проследено обаждане и записан пациент.</p></aside>
+<h2 id="what-you-are-building">Какво изграждате</h2>
+<p>Четири части, по ред. Всяка зависи от предходната.</p>
+<figure class="fig" id="fig-v02">
+<div class="fig-hd"><div class="t">Веригата на проследяването, от начало до край</div><div class="s">Четири звена, в този ред</div></div>
+<div class="fig-bd"><div class="f-flow"><div class="f-fl"><div class="i">Случва се</div><div class="h">Пациентът действа</div><div class="p">Натиска номера ви, изпраща форма, кликва върху имейла ви</div></div><div class="f-fl"><div class="i">Получава име</div><div class="h">Tag Manager го улавя</div><div class="p">Задейства събитие с име, например call_click</div></div><div class="f-fl on"><div class="i">Отчита се</div><div class="h">GA4 го записва</div><div class="p">Съхранява се и се маркира като ключово събитие</div></div><div class="f-fl"><div class="i">Прочита се</div><div class="h">Looker го показва в отчет</div><div class="p">Една страница, която наистина преглеждате всеки месец</div></div></div></div>
+<figcaption class="fig-cap">Прекъснете което и да е звено и веригата не отчита нищо. Повечето практики имат първото и четвъртото звено и нищо между тях.</figcaption>
+</figure>
+<p>Повечето практики имат първото и последното звено и нищо между тях. Нещо се случва, накрая някой прави отчет и отчетът е сглобен от това, което Google случайно е записал безплатно. Двете средни звена са истинската работа и именно в тях е цялата стойност.</p>
+<p>Ето какво всъщност прави всяка част, с прости думи.</p>
+<h4>Google Analytics 4</h4>
+<p>Базата данни. Съхранява всяко записано действие на сайта ви и ви позволява по-късно да задавате въпроси за тях. Безплатен е, стандарт е в индустрията и спокойно ще работи с години, събирайки данни, които никога не сте настроили правилно.</p>
+<h4>Google Tag Manager</h4>
+<p>Контролният панел. Вместо да молите уеб разработчика си да добавя код всеки път, когато искате да измервате нещо ново, инсталирате Tag Manager веднъж и след това настройвате всичко през уеб интерфейс. Това е частта, която повечето практики пропускат, и точно затова проследяването им не се подобрява след първия месец.</p>
+<h4>Google Search Console</h4>
+<p>Другата половина от картината. Analytics ви казва какво са направили хората, след като са влезли в сайта. Search Console ви казва какво са търсили, преди да влязат, на коя позиция сте се появили и колко често някой е кликнал. Това са два напълно различни набора от данни и ви трябват и двата.</p>
+<h4>Bing Webmaster Tools</h4>
+<p>По-малък е, но отнема петнадесет минути и захранва Microsoft Copilot и няколко AI инструмента за отговори. Няма аргумент да не го направите.</p>
+<h4>Looker Studio</h4>
+<p>Отчетът. Безплатен, създаден от Google, свързва се с всичко изброено по-горе и създава една страница, която собственикът на практиката наистина ще прочете. Разгледан е в бонус раздел в края.</p>
+<aside class="acta">
+<h3>Не сте сигурни какво вече е инсталирано на сайта ви?</h3>
+<p>Повечето практики вече имат два или три от тези инструмента, инсталирани от различни хора в продължение на няколко години, като половината са настроени грешно. Петнадесетминутен одит ще ви каже точно какво работи, какво се отчита двойно и какво липсва. Без такса, без натиск за продажба.</p>
+<a class="btn btn-primary" href="https://calendly.com/maxlezginov/free-marketing-consultation" rel="noopener" target="_blank">Запазете безплатен одит на проследяването</a>
+<div class="fine">Безплатен одит · без натиск за продажба · без договор · без обвързване</div>
+</aside>
+<h2 id="step-one-google-analytics-4">Стъпка първа: Google Analytics 4</h2>
+<p>Ако предишна агенция вече е създала GA4 ресурс (property) за сайта ви, използвайте него. Не създавайте втори. Два ресурса, които измерват един и същ сайт, са най-бързият път към два набора числа, които си противоречат, и няма начин да ги обедините по-късно. Вместо това поискайте достъп.</p>
+<p>Ако няма нищо, ето последователността.</p>
+<ol><li>Отидете на analytics.google.com и влезте с акаунта, който искате да е собственик в дългосрочен план. Не с акаунта на служител, който може да напусне. В идеалния случай с имейл адрес на практиката, до който имат достъп повече от един човек.</li><li>Изберете Admin (Администриране), след това Create, след това Property. Дайте му очевидно име, например името на практиката. Задайте правилно часовата зона и валутата за отчетите, защото по-късно те не могат да се променят без последствия.</li><li>Минете през екраните с данни за бизнеса. Категория на индустрията, размер на бизнеса, предназначение. Нито едно от тях не влияе на измерването. Отговорете и продължете.</li><li>В раздела Data collection and modification изберете Data Streams, след това Add stream, след това Web. Въведете URL адреса на сайта и име на потока.</li><li>Оставете Enhanced measurement (подобрено измерване) включено. То ви дава безплатно дълбочина на превъртане, изходящи кликове, изтегляния на файлове и търсене в сайта.</li><li>Отворете потока, който току-що създадохте. В Stream details има Measurement ID (идентификатор за измерване), който започва с G и тире. Копирайте го. Това е единствената стойност, която пренасяте нататък.</li></ol>
+<figure class="fig" id="fig-v03">
+<div class="fig-hd"><div class="t">Стъпка 1. Създайте GA4 ресурс и уеб поток от данни</div></div>
+<div class="fig-bd"><div class="f-ui"><div class="bar2"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">analytics.google.com</span></div>
+<div class="inr"><div class="f-uih"><div class="lg"></div><div class="nm">Google Analytics</div><div class="rt">Admin › Data collection › Data streams</div></div>
+<div class="fld"><div class="lab">Property name</div><div class="inp">Сайт на практиката</div></div>
+<div class="fld"><div class="lab">Website URL</div><div class="inp mono">https://www.yourpractice.com</div></div>
+<div class="fld"><div class="lab">Stream name</div><div class="inp">Основен сайт</div></div>
+<div class="fld"><div class="lab">Measurement ID</div><div class="inp mono hi">G‑XXXXXXXXXX</div>
+<div class="hint">Това е единствената стойност, която пренасяте в следващата стъпка. Запишете я на сигурно място.</div></div>
+<div style="margin-top:16px"><span class="fbtn">View tag instructions</span> <span class="fbtn o">Enhanced measurement: On</span></div></div></div><div class="f-note"><b>Направете го веднъж.</b> Ако предишна агенция вече е създала ресурс, използвайте него, вместо да започвате втори. Два ресурса, които измерват един и същ сайт, са най-бързият начин да се окажете с два набора числа, които си противоречат.</div></div>
+</figure>
+<div class="src"><b>Източник</b><span>Помощ за Google Analytics, Set up Analytics for a website and/or app · <a href="https://support.google.com/analytics/answer/9304153" rel="noopener nofollow" target="_blank">support.google.com/analytics/answer/9304153</a></span></div>
+<p>Google посочва, че събирането на данни започва до около тридесет минути след като тагът заработи. Ако погледнете Realtime (в реално време) и не видите нищо след час, тагът не е на страницата, към което ще се върнем по-късно.</p>
+<h3 id="what-enhanced-measurement-does-and-does-not-cover">Какво покрива Enhanced measurement и какво не</h3>
+<p>Това е по-важно от всичко останало в това ръководство, затова получава собствена таблица.</p>
+<figure class="fig" id="fig-v04">
+<div class="fig-hd"><div class="t">Какво Enhanced Measurement покрива автоматично и какво пропуска</div></div>
+<div class="fig-bd"><div class="f-tw"><table class="f-tbl"><thead><tr><th style="width:34%">Действие на пациента</th><th style="width:24%">Проследява ли се автоматично?</th><th style="width:42%">Какво трябва да направите</th></tr></thead>
+<tbody><tr><td>Показвания на страници</td><td class="g">Да</td><td>Нищо</td></tr><tr><td>Превъртане до 90% от страницата</td><td class="g">Да</td><td>Нищо</td></tr><tr><td>Клик върху връзка към друг сайт</td><td class="g">Да</td><td>Нищо</td></tr><tr><td>Изтегляне на файлове (форми за нови пациенти)</td><td class="g">Да</td><td>Нищо</td></tr><tr><td><b>Натискане на телефонния номер</b></td><td class="g">Не</td><td>Създайте тригер Just Links в Tag Manager</td></tr><tr><td><b>Клик върху имейл адреса</b></td><td class="g">Не</td><td>Създайте тригер Just Links в Tag Manager</td></tr><tr><td><b>Изпращане на формата за записване на час</b></td><td class="g">Не надеждно</td><td>Изпратете персонализирано събитие при успешно изпращане на формата</td></tr><tr><td>Обаждане, което реално се осъществява</td><td class="g">Не</td><td>Софтуер за проследяване на обажданията, а не уеб анализ</td></tr></tbody></table></div>
+<div class="f-scroll">Превъртете таблицата настрани, за да видите всички колони.</div><div class="f-note"><b>Закономерността.</b> Всичко, което Google ви дава безплатно, измерва разглеждането. Всичко, което измерва пациент, опитващ се да се свърже с вас, трябва да се изгради. В това е цялата работа.</div></div>
+</figure>
+<p>Прочетете отново редовете в удебелен шрифт. Всяко безплатно автоматично измерване, което Google ви дава, засяга поведението при разглеждане. Всяко действие, което представлява пациент, опитващ се да се свърже с вас, трябва да се изгради ръчно.</p>
+<p>Има техническа причина за тази празнина с телефонния номер, която си струва да разберете, защото обяснява защо толкова много практики смятат, че са покрити, когато не са. Google определя изходящия клик като клик върху връзка, която води извън вашия домейн към друг сайт. Връзката tel: не води към друг сайт. Тя предава действието на приложението за телефон. Затова не отговаря на определението и подобреното измерване я пренебрегва напълно.</p>
+<div class="src"><b>Източник</b><span>Помощ за Google Analytics, Enhanced measurement events · <a href="https://support.google.com/analytics/answer/9216061" rel="noopener nofollow" target="_blank">support.google.com/analytics/answer/9216061</a></span></div>
+<aside class="cal tip"><div class="ch">Двеминутният тест, който можете да направите веднага</div><p>Отворете сайта на практиката си на телефона. Натиснете телефонния номер в хедъра. Сега отворете Google Analytics, отидете в Reports, след това Realtime, и погледнете списъка със събития.</p><p>Ако до тридесет секунди не видите събитие, натисканията на телефонния ви номер не се измерват и вероятно никога не са се измервали.</p></aside>
+<h2 id="step-two-google-tag-manager">Стъпка втора: Google Tag Manager</h2>
+<p>Tag Manager е контейнер, който инсталирате веднъж. След това всяко ново нещо, което искате да измервате, се настройва в уеб интерфейс, а не в кода на сайта ви. Ако вземете само едно структурно решение от това ръководство, нека е това.</p>
+<p>Алтернативата, до която стигат повечето практики, е сайт с четири или пет фрагмента код за проследяване, поставени от различни хора в продължение на няколко години, като никой от тях не е документирал какво е направил. Никой не знае какво се задейства. Никой не иска да махне нищо, за да не счупи нещо. Tag Manager съществува точно за да предотврати това състояние.</p>
+<figure class="fig" id="fig-v05">
+<div class="fig-hd"><div class="t">Стъпка 2. Инсталирайте Google Tag Manager</div><div class="s">Два блока код, две места</div></div>
+<div class="fig-bd"><div><div class="f-stp"><div class="num">1</div><div class="tx"><div class="h">Създайте акаунта и контейнера</div><div class="p">На tagmanager.google.com създайте акаунт за практиката и контейнер от тип <b>Web</b> за сайта. Google ви дава ID на контейнера, който започва с <b>GTM‑</b>.</div></div></div><div class="f-stp"><div class="num">2</div><div class="tx"><div class="h">Поставете първия блок възможно най-високо в &lt;head&gt;</div><div class="p">Това е блокът с JavaScript. Формулировката на Google е буквална: <b>възможно най-високо в тага head</b>. В Webflow той отива в Site settings, Custom code, Head code.</div></div></div><div class="f-stp"><div class="num">3</div><div class="tx"><div class="h">Поставете втория блок веднага след отварящия таг &lt;body&gt;</div><div class="p">Това е блокът noscript с iframe. В Webflow той отива в полето Body code. Това е резервен вариант за посетители с изключен JavaScript.</div></div></div><div class="f-stp g"><div class="num">4</div><div class="tx"><div class="h">Публикувайте, после проверете</div><div class="p">Публикувайте сайта, след това използвайте режима <b>Preview</b> в Tag Manager. Панел за отстраняване на грешки трябва да се свърже с работещия ви сайт. Ако не се свързва, кодът не е на страницата.</div></div></div></div></div>
+<figcaption class="fig-cap">И двата блока се поставят на всяка страница на сайта, не само на началната.</figcaption>
+</figure>
+<div class="src"><b>Източник</b><span>Помощ за Google Tag Manager, Install the Tag Manager container · <a href="https://support.google.com/tagmanager/answer/14847097" rel="noopener nofollow" target="_blank">support.google.com/tagmanager/answer/14847097</a></span></div>
+<h4>Конкретно за Webflow</h4>
+<p>Site settings, след това Custom code. Първият блок отива в Head code, вторият в Body code. Имайте предвид, че полетата за персонализиран код изискват платен план за сайта или платен Workspace план. Ако тези полета са сиви и неактивни, причината е тази.</p>
+<h4>Конкретно за WordPress</h4>
+<p>Или плъгин за скриптове в хедъра и футъра, или настройките на темата ви, ако тя има поле за персонализиран код. Избягвайте поставянето директно във файловете на темата, защото актуализация на темата ще го изтрие.</p>
+<aside class="cal warn"><div class="ch">Нищо не работи на живо, докато не натиснете Publish</div><p>Запазването на таг в Tag Manager не го пуска в действие. Има отделно действие Submit и Publish, което създава версия и я качва на работещия ви сайт.</p><p>Това хваща всеки поне веднъж. Ако създадете таг, тествате го в режим Preview, видите, че работи, и после откриете, че никога не се е задействал на работещия сайт, причината е тази.</p></aside>
+<h2 id="step-three-connect-analytics-through-tag-manager">Стъпка трета: свържете Analytics чрез Tag Manager</h2>
+<p>Вече имате инсталирани две неща. Следващата стъпка е Tag Manager да задейства Analytics, вместо Analytics да е инсталиран отделно.</p>
+<figure class="fig" id="fig-v07">
+<div class="fig-hd"><div class="t">Стъпка 3. Задействайте GA4 от Tag Manager</div></div>
+<div class="fig-bd"><div class="f-ui"><div class="bar2"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">tagmanager.google.com</span></div>
+<div class="inr"><div class="f-uih"><div class="lg"></div><div class="nm">Google Tag Manager</div><div class="rt">Tags › New</div></div>
+<div class="fld"><div class="lab">Tag name</div><div class="inp">GA4 - основен</div></div>
+<div class="fld"><div class="lab">Tag type</div><div class="inp">Google Tag</div></div>
+<div class="fld"><div class="lab">Tag ID</div><div class="inp mono hi">G‑XXXXXXXXXX</div><div class="hint">Measurement ID, който копирахте в стъпка 1.</div></div>
+<div class="fld"><div class="lab">Trigger</div><div class="inp">Initialization - All Initialization Events</div></div>
+<div style="margin-top:16px"><span class="fbtn">Submit</span> <span class="fbtn g">Publish and create version</span></div></div></div><div class="f-note"><b>Нищо в Tag Manager не работи на живо, докато не натиснете Publish.</b> Запазването на таг не го пуска в действие. Това хваща всеки поне веднъж.</div></div>
+</figure>
+<div class="src"><b>Източник</b><span>Помощ за Google Tag Manager, Set up the Google tag in Tag Manager · <a href="https://support.google.com/tagmanager/answer/9442095" rel="noopener nofollow" target="_blank">support.google.com/tagmanager/answer/9442095</a></span></div>
+<h3 id="then-go-and-remove-the-other-one">След това отидете и премахнете другия</h3>
+<p>Това е частта, която хората пропускат, и е най-честата причина за грешни числа в анализите на малкия бизнес.</p>
+<figure class="fig" id="fig-v06">
+<div class="fig-hd"><div class="t">Най-честата грешка при тагирането</div></div>
+<div class="fig-bd"><div class="f-two">
+<div class="f-pane bad"><div class="ph">Двойно тагиране. Всяко число е грешно.</div><div class="pb"><ul><li>Код на GA4, вграден директно в head</li><li><b>и</b> Tag Manager, който също задейства GA4</li><li>Надути сесии</li><li>Процентът на отпадане е намален наполовина</li><li>Всяка конверсия се отчита два пъти</li></ul></div></div>
+<div class="f-pane good"><div class="ph">Един метод на инсталиране. Числата са реални.</div><div class="pb"><ul><li>Само кодът на Tag Manager</li><li>GA4 се задейства като таг в Tag Manager</li><li>Едно показване на страница за всяко реално показване</li><li>Отчети, по които можете да действате</li><li>Място за ново проследяване по-късно</li></ul></div></div>
+</div><div class="f-note">Google е категоричен по въпроса: <b>„Трябва да използвате или Google tag, или Tag Manager, но не и двете… Използването на двата метода ще има непредвидени последици, например завишено отчитане на данните от вашия сайт.“</b> В Webflow това се случва постоянно, защото полето Integrations и полето Custom code са две различни места, където може да се постави един и същ ID.</div></div>
+</figure>
+<div class="src"><b>Източник</b><span>Помощ за Google Analytics, Google tag and Google Tag Manager · <a href="https://support.google.com/analytics/answer/9311124" rel="noopener nofollow" target="_blank">support.google.com/analytics/answer/9311124</a></span></div>
+<p>Webflow прави тази грешка особено лесна, защото има две напълно отделни места за един и същ Measurement ID. Има специално поле Google Analytics в Integrations и има поле за персонализиран код Head code. Ако ID-то е и на двете места или ако е в полето Integrations, докато Tag Manager също задейства GA4, сайтът ви е двойно тагиран.</p>
+<p>Webflow предупреждава за това директно в собствената си документация: добавете тага само на едно място.</p>
+<div class="src"><b>Източник</b><span>Помощ за Webflow, How do I connect my Webflow site to Google Analytics · <a href="https://help.webflow.com/hc/en-us/articles/33961293143059-How-do-I-connect-my-Webflow-site-to-Google-Analytics" rel="noopener nofollow" target="_blank">help.webflow.com/hc/en-us/articles/33961293143059-How-do-I-con…</a></span></div>
+<h4>Как да проверите дали сайтът ви е двойно тагиран</h4>
+<ol><li>Отворете сайта си. Кликнете с десния бутон и изберете View page source (преглед на изходния код).</li><li>Натиснете Ctrl+F или Cmd+F и потърсете своя Measurement ID, стойността, която започва с G и тире.</li><li>Ако той изобщо се появява в изходния код на страницата, докато Tag Manager също го задейства, имате дублиране. Премахнете вградения директно в кода.</li><li>Едно изключение: ако сайтът ви използва плъгина Google Site Kit за WordPress, ID-то няма да се появи като стойност, започваща с G и тире. Вместо това Site Kit поставя обединен таг с префикс GT. Проверете в Realtime на Analytics, а не в изходния код на страницата.</li></ol>
+<aside class="acta">
+<h3>Мислите, че може да отчитате двойно?</h3>
+<p>Ако трафикът ви е скочил без причина, процентът на отпадане изглежда подозрително добър или два отчета никога не са съвпадали, двойното тагиране е първото, което трябва да проверите. Ще погледнем изходния код на страницата ви и до десет минути ще ви кажем какво се задейства и какво трябва да се премахне.</p>
+<a class="btn btn-primary" href="https://calendly.com/maxlezginov/free-marketing-consultation" rel="noopener" target="_blank">Безплатна проверка на проследяването</a>
+<div class="fine">Безплатен одит · без натиск за продажба · без договор · без обвързване</div>
+</aside>
+<h2 id="step-four-search-console-and-bing-webmaster-tools">Стъпка четвърта: Search Console и Bing Webmaster Tools</h2>
+<p>Analytics ви казва какво се е случило, след като някой е влязъл в сайта. Search Console ви казва какво се е случило преди това. За кои заявки сте се появили, на каква позиция сте били, колко хора са ви видели и колко са кликнали. Това е единственият безплатен източник на тези данни и няма заместител.</p>
+<h3 id="choose-the-property-type-before-you-do-anything-else">Изберете типа ресурс, преди да направите каквото и да е друго</h3>
+<p>Search Console предлага два вида ресурс и изборът има последствия, които не можете лесно да отмените.</p>
+<figure class="fig" id="fig-v08">
+<div class="fig-hd"><div class="t">Search Console: изберете правилния тип ресурс, преди да започнете</div></div>
+<div class="fig-bd"><div class="f-two">
+<div class="f-pane bad"><div class="ph">Ресурс URL prefix (с префикс на URL)</div><div class="pb"><ul><li>Покрива точно един префикс</li><li>https:// и http:// са отделни</li><li>www и версията без www са отделни</li><li>Половината ви данни изчезват безшумно</li><li>Потвърждава се чрез качване на файл или мета таг</li></ul></div></div>
+<div class="f-pane good"><div class="ph">Ресурс Domain (използвайте този)</div><div class="pb"><ul><li>Покрива всички поддомейни и протоколи</li><li>Не се влияе от промяна на пренасочването към www</li><li>Не се влияе от миграция към https</li><li>Един ресурс, пълни данни</li><li>Потвърждава се само чрез DNS запис</li></ul></div></div>
+</div><div class="f-note"><b>Планирайте достъпа до DNS, преди да започнете.</b> Ресурс Domain може да се потвърди само с TXT или CNAME запис при регистратора на домейна. Качване на HTML файл и потвърждение с мета таг не са възможни за него. Ако домейнът се управлява от уеб разработчика ви, първо поискайте това от него.</div></div>
+</figure>
+<div class="src"><b>Източник</b><span>Помощ за Google Search Console, Verify your site ownership · <a href="https://support.google.com/webmasters/answer/9008080" rel="noopener nofollow" target="_blank">support.google.com/webmasters/answer/9008080</a></span></div>
+<p>Използвайте ресурс Domain. Причината е проста. Ресурсът URL prefix отчита точно една форма на адреса. Ако сайтът ви е достъпен и с www, и без www, или ако някога се премести от http на https, ресурсът URL prefix безшумно ще отчита само част от трафика ви и няма да ви предупреди, че го прави.</p>
+<p>Уловката е, че ресурс Domain може да се потвърди само чрез добавяне на DNS запис при регистратора на домейна ви. Няма опция за качване на файл и няма опция с мета таг. Затова, преди да започнете, разберете кой контролира домейна. Ако е уеб разработчикът ви, помолете го да добави записа и му дайте точната стойност, която Google ви показва.</p>
+<h3 id="submit-the-sitemap">Изпратете картата на сайта</h3>
+<p>След потвърждението намерете картата на сайта си (sitemap). На повечето сайтове тя е на адрес yoursite.com/sitemap.xml. Webflow я генерира автоматично. Изпратете я от отчета Sitemaps.</p>
+<p>Добавете и ред във файла robots.txt, който сочи към нея. Двойна застраховка, която не струва нищо.</p>
+<p><code>Sitemap: https://www.yourpractice.com/sitemap.xml</code></p>
+<p>Бъдете реалисти за това какво постига това. Google изрично посочва, че изпращането на карта на сайта е подсказка, а не инструкция, и не гарантира, че нещо ще бъде обходено или индексирано. Помага. Не е магия.</p>
+<div class="src"><b>Източник</b><span>Google Search Central, Build and submit a sitemap · <a href="https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap" rel="noopener nofollow" target="_blank">developers.google.com/search/docs/crawling-indexing/sitemaps/b…</a></span></div>
+<h3 id="bing-takes-fifteen-minutes-because-you-import-it">Bing отнема петнадесет минути, защото го импортирате</h3>
+<figure class="fig" id="fig-v09">
+<div class="fig-hd"><div class="t">Стъпка 4. Search Console и Bing за под петнадесет минути</div></div>
+<div class="fig-bd"><div><div class="f-stp"><div class="num">1</div><div class="tx"><div class="h">Потвърдете Search Console като ресурс Domain</div><div class="p">Добавете изискания TXT запис при регистратора си. Разпространението обикновено отнема минути, понякога часове.</div></div></div><div class="f-stp"><div class="num">2</div><div class="tx"><div class="h">Изпратете картата на сайта си</div><div class="p">Обикновено <b>yoursite.com/sitemap.xml</b>. Изпратете я в отчета Sitemaps и добавете ред <b>Sitemap:</b> и в robots.txt. Google я третира като подсказка, а не като инструкция.</div></div></div><div class="f-stp g"><div class="num">3</div><div class="tx"><div class="h">Отворете Bing Webmaster Tools и изберете Import</div><div class="p">Влезте в профила си, след това в My Sites изберете <b>Import</b>. Удостоверете се с Google акаунта си и Bing автоматично изтегля потвърдените сайтове и карти на сайта.</div></div></div><div class="f-stp g"><div class="num">4</div><div class="tx"><div class="h">Изчакайте до 48 часа</div><div class="p">На Bing му трябват до два дни, за да попълни данните за трафика. Нищо не се е объркало, ако отчетът е празен в първия ден.</div></div></div></div></div>
+<figcaption class="fig-cap">Bing стои зад Microsoft Copilot и захранва няколко AI инструмента за отговори. Отнема петнадесет минути, а повечето практики го пропускат изцяло.</figcaption>
+</figure>
+<div class="src"><b>Източник</b><span>Bing Webmaster Blog, Import sites from Search Console to Bing Webmaster Tools · <a href="https://blogs.bing.com/webmaster/september-2019/Import-sites-from-Search-Console-to-Bing-Webmaster-Tools" rel="noopener nofollow" target="_blank">blogs.bing.com/webmaster/september-2019/Import-sites-from-Sear…</a></span></div>
+<p>В повечето пазари Bing е около една десета от Google по обем, така че сам по себе си е малка награда. Причината да го направите е, че Bing задвижва Microsoft Copilot и захранва няколко AI инструмента за отговори, а това пространство расте. В проучването си сред потребители за 2026 г. BrightLocal установи, че делът на потребителите, които използват AI инструменти, за да намират местни бизнеси, е скочил от 6 на 45 процента само за една година, докато използването на Google е спаднало от 83 на 71 процента.</p>
+<div class="src"><b>Източник</b><span>BrightLocal, Local Consumer Review Survey 2026, n=1 002 пълнолетни жители на САЩ · <a href="https://www.brightlocal.com/research/local-consumer-review-survey/" rel="noopener nofollow" target="_blank">www.brightlocal.com/research/local-consumer-review-survey/</a></span></div>
+<p>Това е едно проучване и една година и трябва да се чете като посока, а не като прогноза. Но петнадесет минути, за да присъствате там, са разумна сделка така или иначе.</p>
+<h2 id="step-five-the-event-logic-which-is-the-actual-work">Стъпка пета: логиката на събитията, която е истинската работа</h2>
+<p>Всичко дотук беше инсталация. Този раздел е частта, която отличава практиката, която знае цената си на пациент, от практиката, която не я знае.</p>
+<p>Въпросът, на който трябва да отговорите първо, не е технически. Той е следният: какво прави пациентът на сайта ви, което има парична стойност за вас?</p>
+<p>За дентална практика честният отговор е кратък.</p>
+<figure class="fig" id="fig-v10">
+<div class="fig-hd"><div class="t">Трите събития, от които денталната практика наистина има нужда</div><div class="s">Всичко останало е украса</div></div>
+<div class="fig-bd"><div><div class="f-lc"><div class="h">call_click · натискане на телефонния номер</div><div class="p">Тригер <b>Just Links</b> с условие <b>Click URL contains tel:</b>. За дентална практика това обикновено е най-голямата измерена конверсия. GA4 никога няма да я улови сам, защото връзката tel: е обработчик на протокол, а не връзка към друг сайт.</div></div><div class="f-lc"><div class="h">email_click · натискане на mailto връзка</div><div class="p">Същият тип тригер, с <b>Click URL contains mailto:</b>. По-малък обем от обажданията, по-силно намерение от формата. Струва си двете минути за настройка.</div></div><div class="f-lc g"><div class="h">form_submit_success · заявката за час</div><div class="p">Тригер <b>Custom Event</b>, който слуша за dataLayer push, изпратен при успешно изпращане на формата. Не вграденият тригер Form Submission, по причината, обяснена по-нататък.</div></div></div></div>
+<figcaption class="fig-cap">Три събития. Може би четиридесет минути работа. Това е разликата между това да знаете цената си на пациент и да я гадаете.</figcaption>
+</figure>
+<h3 id="understanding-the-logic-before-the-clicks">Разберете логиката, преди да кликате</h3>
+<p>Събитието в GA4 има име и, по желание, някакви параметри. Това е всичко. Умението не е в настройката, а в решението какво да назовете и какво да пренебрегнете.</p>
+<p>Грешката на практиките е, че измерват твърде много. Накрая имат четиридесет събития, тридесет и пет от които са шум, а петте важни са заровени. Три добре изградени събития побеждават четиридесет зле изградени всеки път, защото трите наистина ще ги гледате.</p>
+<h4>Защо натискането на телефонния номер е най-ценното събитие, което ще изградите</h4>
+<p>BrightLocal анализира 45 264 бизнес профила в 36 отрасъла и публикува сравнителни показатели по отрасли. Конкретно за зъболекарите средният профил генерира 39 обаждания и 46 клика към сайта на месец. Двете числа са почти еднакви по размер.</p>
+<div class="src"><b>Източник</b><span>BrightLocal, Google My Business Insights Study, 45 264 бизнеса (данни от 2019 г.) · <a href="https://www.brightlocal.com/research/google-my-business-insights-study/" rel="noopener nofollow" target="_blank">www.brightlocal.com/research/google-my-business-insights-study…</a></span></div>
+<p>Това проучване е от 2019 г. и трябва да се чете с това наум. Но структурният извод важи и продължава да важи оттогава: за дентална практика обажданията и посещенията на сайта са сравними по обем, а при стандартна инсталация на анализите се измерва само едното от двете.</p>
+<h4>Изграждане на тригера за натискане на телефонния номер</h4>
+<figure class="fig" id="fig-v11">
+<div class="fig-hd"><div class="t">Изграждане на тригера за натискане на телефонния номер</div></div>
+<div class="fig-bd"><div class="f-ui"><div class="bar2"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">tagmanager.google.com</span></div>
+<div class="inr"><div class="f-uih"><div class="lg"></div><div class="nm">Google Tag Manager</div><div class="rt">Triggers › New</div></div>
+<div class="fld"><div class="lab">Trigger name</div><div class="inp">Клик - телефонен номер</div></div>
+<div class="fld"><div class="lab">Trigger type</div><div class="inp">Click - Just Links</div></div>
+<div class="fld"><div class="lab">This trigger fires on</div><div class="inp">Some Link Clicks</div></div>
+<div class="fld"><div class="lab">Condition</div><div class="inp mono hi">Click URL contains tel:</div></div>
+<div class="hint" style="margin-bottom:14px">Първо активирайте вградената променлива <b>Click URL</b> от Variables › Configure, иначе условието никога няма да съвпадне.</div>
+<div class="fld"><div class="lab">След това прикачете таг GA4 Event</div><div class="inp">Event name: <b>call_click</b></div></div></div></div><div class="f-note"><b>Тествайте, преди да се доверите.</b> Отворете режима Preview, натиснете собствения си телефонен номер от телефон и гледайте как се появява събитието. Пет от десет практики имат тригер, който никога не е бил проверен и от година не задейства нищо.</div></div>
+</figure>
+<div class="src"><b>Източник</b><span>Помощ за Google Tag Manager, Click triggers · <a href="https://support.google.com/tagmanager/answer/7679320" rel="noopener nofollow" target="_blank">support.google.com/tagmanager/answer/7679320</a></span></div>
+<p>Стъпка по стъпка, за да няма двусмислие.</p>
+<ol><li>В Tag Manager отидете във Variables, след това Configure под Built-In Variables. Отметнете Click URL. Ако пропуснете това, условието по-долу никога няма да съвпадне, и това е най-честата причина тригерът за телефона да не работи.</li><li>Отидете в Triggers, след това New. Изберете тип тригер Click, след това Just Links.</li><li>Изберете Some Link Clicks. Задайте условието Click URL contains tel:</li><li>Дайте му очевидно име, например „Клик - телефонен номер“. Запазете.</li><li>Отидете в Tags, след това New. Тип таг Google Analytics: GA4 Event. Изберете своята GA4 конфигурация. Event name: call_click</li><li>Прикачете тригера, който току-що създадохте. Запазете.</li><li>Натиснете Preview. При отворен панел за отстраняване на грешки отворете сайта си на телефон, натиснете номера и потвърдете, че тагът се задейства.</li><li>Едва след като сте видели, че се задейства, натиснете Submit и Publish.</li></ol>
+<aside class="cal tip"><div class="ch">Именувайте събитията с малки букви и долни черти</div><p>call_click, а не Call Click. email_click, а не Email.</p><p>Имената на събитията в GA4 различават главни и малки букви, а смесването на стилове създава две отделни събития там, където е трябвало да има едно. Изберете конвенция още от първия ден и никога не се отклонявайте от нея.</p></aside>
+<h4>Тригерът за клик върху имейл</h4>
+<p>Същият процес. Тригер Just Links, условие Click URL contains mailto:, име на събитието email_click. Две минути.</p>
+<p>По-малък обем от обажданията, но намерението зад имейл до дентална практика обикновено е силно. Човек, който пише въпрос за импланти, вече е решил, че иска импланти.</p>
+<h4>Изпратената форма: тук става интересно</h4>
+<p>Tag Manager има вграден тригер Form Submission. При обикновена HTML форма работи перфектно. При модерен сайт обикновено не работи, а причината си струва да се разбере.</p>
+<figure class="fig" id="fig-v12">
+<div class="fig-hd"><div class="t">Защо вграденият тригер Form Submission обикновено не работи на модерен сайт</div></div>
+<div class="fig-bd"><div class="f-two">
+<div class="f-pane bad"><div class="ph">Какво пробват хората първо</div><div class="pb"><ul><li>Вграден тригер <b>Form Submission</b></li><li>Разчита на стандартното събитие submit на браузъра</li><li>Webflow и повечето модерни конструктори прихващат това събитие</li><li>Формата се изпраща успешно, тригерът никога не се задейства</li><li>Или: вместо това проследявате страницата /thank‑you</li></ul></div></div>
+<div class="f-pane good"><div class="ph">Какво наистина работи</div><div class="pb"><ul><li><b>dataLayer.push</b> при успешното изпращане на формата</li><li>Тригер <b>Custom Event</b>, който слуша за това име</li><li>Задейства се независимо дали страницата се сменя</li><li>Работи с AJAX форми, чат уиджети, изскачащи прозорци</li><li>Не е нужна страница за благодарност</li></ul></div></div>
+</div><div class="f-note">Тук авторитетът е собствената документация на Google: с тригер Custom Event <b>„тагът ще се задейства дори когато стандартното събитие submit е предефинирано.“</b> Точно това е ситуацията, която създава формата в Webflow.</div></div>
+</figure>
+<div class="src"><b>Източник</b><span>Помощ за Google Tag Manager, Custom Event trigger · <a href="https://support.google.com/tagmanager/answer/7679219" rel="noopener nofollow" target="_blank">support.google.com/tagmanager/answer/7679219</a></span></div>
+<p>Ето какво се случва. Webflow и повечето модерни конструктори на сайтове всъщност не изпращат формата в традиционния смисъл. Те прихващат изпращането, изпращат данните във фонов режим и заменят формата със съобщение за успех, без изобщо да презареждат страницата. От гледна точка на браузъра изпращане не е имало. Затова вграденият тригер никога не се задейства.</p>
+<p>Решението е сами да обявите успеха.</p>
+<p><code>dataLayer.push({ 'event': 'form_submit_success' });</code></p>
+<p>Този един ред, изпълнен, когато формата покаже съобщението си за успех, дава на Tag Manager нещо недвусмислено, за което да слуша. След това създавате тригер Custom Event с име на събитието form_submit_success, прикачвате към него таг GA4 Event и сте готови.</p>
+<p>Уеб разработчикът ви веднага ще разбере този ред. Ако сайтът ви е на Webflow, той отива в персонализирания код на страницата или на сайта, заедно с малък слушател за успешното състояние на формата. Това е петминутна задача за някого, който го е правил преди.</p>
+<h4>Прекият път със страница за благодарност и защо да го избягвате</h4>
+<p>Има по-лесен път, към който хората посягат. Пренасочвате формата към страница /thank-you и броите показванията на тази страница като конверсии. Работи, в тесния смисъл, че дава число.</p>
+<figure class="fig" id="fig-v13">
+<div class="fig-hd"><div class="t">Защо прекият път със страница за благодарност ви струва данни</div></div>
+<div class="fig-bd"><div class="f-two">
+<div class="f-pane bad"><div class="ph">Проследяване чрез страница за благодарност</div><div class="pb"><ul><li>Пропуска всяко успешно изпращане на AJAX форма</li><li>Пропуска всяко натискане на телефонния номер</li><li>Пропуска всяко изпращане през чат</li><li>Брои двойно при опресняване на страницата или отваряне от отметка</li><li>Страницата може да се индексира и до нея може да се стигне от търсенето</li></ul></div></div>
+<div class="f-pane good"><div class="ph">Проследяване чрез събития</div><div class="pb"><ul><li>Задейства се при реалното успешно изпращане</li><li>Покрива еднакво обаждания, имейли и форми</li><li>Задейства се веднъж за всяко реално изпращане</li><li>Няма какво да се индексира по погрешка</li><li>Работи по един и същ начин за всяка форма на сайта</li></ul></div></div>
+</div><div class="f-note">Ако пазите страница за благодарност заради преживяването на пациента, запазете я. Просто ѝ добавете <b>noindex</b> и не я правете единственото си измерване.</div></div>
+</figure>
+<p>Проблемът е всичко, което пропуска, и всичко, което отчита двойно. Ако пазите страница за благодарност, защото е добра за преживяването на пациента, запазете я. Просто добавете таг noindex, за да не се показва в резултатите от търсенето, и не я правете единственото си измерване.</p>
+<aside class="acta">
+<h3>Искате ли да изградим тези три събития вместо вас?</h3>
+<p>Натискания на телефонния номер, кликове върху имейла и изпратени форми, настроени в Tag Manager, тествани на реално устройство и с потвърдено задействане в Analytics. Ако не искате да прекарате съботата си в това, ще го направим като част от безплатен маркетингов одит и ще ви покажем първата седмица реални числа.</p>
+<a class="btn btn-primary" href="https://calendly.com/maxlezginov/free-marketing-consultation" rel="noopener" target="_blank">Запазете безплатен одит и стратегически разговор</a>
+<div class="fine">Безплатен одит · без натиск за продажба · без договор · без обвързване</div>
+</aside>
+<h2 id="step-six-mark-them-as-key-events">Стъпка шеста: маркирайте ги като ключови събития</h2>
+<p>Събитията се записват. Ключовите събития са тези, които Google третира като бизнес резултатите ви, и именно те се появяват в отчетите, които наистина ще четете.</p>
+<figure class="fig" id="fig-v14">
+<div class="fig-hd"><div class="t">Стъпка 5. Маркирайте събитията като ключови събития</div></div>
+<div class="fig-bd"><div class="f-ui"><div class="bar2"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">analytics.google.com</span></div>
+<div class="inr"><div class="f-uih"><div class="lg"></div><div class="nm">Google Analytics</div><div class="rt">Admin › Data display › Events</div></div>
+<div class="f-tw"><table class="f-tbl"><thead><tr><th style="width:40%">Event name</th><th style="width:25%">Count</th><th style="width:35%">Mark as key event</th></tr></thead><tbody>
+<tr><td class="mono">call_click</td><td class="n">61</td><td><span class="pill a">On</span></td></tr>
+<tr><td class="mono">form_submit_success</td><td class="n">24</td><td><span class="pill a">On</span></td></tr>
+<tr><td class="mono">email_click</td><td class="n">9</td><td><span class="pill a">On</span></td></tr>
+<tr><td class="mono">page_view</td><td class="n">4 180</td><td><span class="pill d">Off</span></td></tr>
+<tr><td class="mono">scroll</td><td class="n">2 905</td><td><span class="pill d">Off</span></td></tr>
+</tbody></table></div></div></div><div class="f-note"><b>Google преименува конверсиите на ключови събития.</b> Ключовото събитие е бизнес действие, което анализирате в Analytics. Конверсията вече е конкретно действие, което подавате на Google Ads за наддаването. Включването на превключвателя тук не изпраща нищо към Ads. Това е отделен импорт.</div></div>
+</figure>
+<div class="src"><b>Източник</b><span>Помощ за Google Analytics, About key events · <a href="https://support.google.com/analytics/answer/9267568" rel="noopener nofollow" target="_blank">support.google.com/analytics/answer/9267568</a></span></div>
+<p>Пътят е Admin, след това Data display, след това Events. Намерете събитието си в списъка и включете превключвателя Mark as key event (маркиране като ключово събитие). Имайте предвид, че събитието трябва да се е задействало поне веднъж, преди да се появи в този списък, което първия път е малък проблем от типа „кокошката или яйцето“. Задействайте го сами от телефона си, изчакайте няколко минути и се върнете.</p>
+<h3 id="key-events-are-not-conversions-any-more">Ключовите събития вече не са конверсии</h3>
+<p>Google промени тази терминология и тя създава реално объркване, затова си струва да бъдем точни.</p>
+<ul><li>Ключовото събитие е важно бизнес действие, което анализирате в Analytics.</li><li>Конверсията вече е конкретно действие, което изпращате към Google Ads, за да оптимизирате наддаването.</li><li>Включването на превключвателя в Analytics не изпраща нищо към Google Ads.</li></ul>
+<div class="src"><b>Източник</b><span>Помощ за Google Analytics, Conversions vs key events · <a href="https://support.google.com/analytics/answer/13965727" rel="noopener nofollow" target="_blank">support.google.com/analytics/answer/13965727</a></span></div>
+<p>Ако използвате Google Ads, импортирането им като конверсии е отделна стъпка. Намира се в Analytics, в Advertising, след това Tools, след това Conversion management. Изисква първо акаунтите в Analytics и Ads да бъдат свързани и автоматичното тагиране да бъде включено в Ads.</p>
+<div class="src"><b>Източник</b><span>Помощ за Google Analytics, Import Analytics key events into Google Ads · <a href="https://support.google.com/analytics/answer/10632359" rel="noopener nofollow" target="_blank">support.google.com/analytics/answer/10632359</a></span></div>
+<h2 id="step-seven-the-five-settings-that-quietly-ruin-the-data">Стъпка седма: петте настройки, които тихомълком съсипват данните</h2>
+<p>Всичко по-горе вече е инсталирано и се задейства. Този раздел е за нещата, които през следващите месеци безшумно ще изкривят числата ви, ако не ги поправите сега.</p>
+<figure class="fig" id="fig-v15">
+<div class="fig-hd"><div class="t">Петте настройки, които тихомълком съсипват данните на малките практики</div><div class="s">Поправете ги веднъж, още в първия ден</div></div>
+<div class="fig-bd"><div><div class="f-lc"><div class="h">1. Вътрешният трафик не е изключен</div><div class="p">Практика с петима души, които опресняват собствения си сайт, може да е една трета от записания трафик. Определете вътрешния трафик в настройките на потока от данни, след това създайте филтър за данни <b>Exclude</b> и го задайте на <b>Active</b>, а не на Testing. Филтър, оставен в Testing, никога не премахва нищо.</div></div><div class="f-lc g"><div class="h">2. Системата за записване на час е на друг домейн</div><div class="p">Без междудомейнна настройка GA4 отчита един пациент като двама потребители и две сесии, а доставчикът на системата ви за записване се появява като основен източник на препращания и отнема заслугата от търсенето, което реално е довело пациента.</div></div><div class="f-lc"><div class="h">3. Няма изключения за нежелани препращания</div><div class="p">Когато не можете да поставите таг на другия домейн, добавете го вместо това в <b>List unwanted referrals</b>. До петдесет на поток от данни.</div></div><div class="f-lc g"><div class="h">4. И GTM, и таг, вграден директно в кода</div><div class="p">Разгледано по-горе. Струва си да проверите два пъти, защото не се вижда, докато не погледнете изходния код на страницата.</div></div><div class="f-lc"><div class="h">5. Ресурс URL prefix в Search Console</div><div class="p">Половината ви данни изчезват без нито едно съобщение за грешка. Използвайте ресурс Domain.</div></div></div></div>
+</figure>
+<h3 id="excluding-internal-traffic-in-detail">Изключване на вътрешния трафик в подробности</h3>
+<p>Тази настройка е подценявана. Практика с петима служители, рецепция, която отваря сайта няколко пъти на ден, и собственик, който проверява блога, лесно може да генерира от двадесет до четиридесет процента от собствения си записан трафик. При сайт с две хиляди сесии на месец това не е грешка от закръгляне.</p>
+<ol><li>Admin, Data streams, изберете потока си, Configure tag settings, Show more, Define internal traffic, Create.</li><li>Оставете стойността на traffic_type като internal. Добавете IP адреса на практиката. Ще ви го даде вашият IT доставчик или бързо търсене на „what is my IP“.</li><li>Admin, Data filters, Create Filter, Internal Traffic, Exclude.</li><li>Задайте състоянието на филтъра на Active. Не на Testing.</li></ol>
+<aside class="cal warn"><div class="ch">Филтър, оставен в Testing, не премахва нищо</div><p>По подразбиране GA4 създава филтрите за данни в режим Testing. В режим Testing филтърът не прави нищо, освен да ви позволи да видите предварително ефекта му.</p><p>Това вероятно е най-честата грешна настройка в GA4. Отидете и проверете своята.</p></aside>
+<div class="src"><b>Източник</b><span>Помощ за Google Analytics, Filter unwanted traffic · <a href="https://support.google.com/analytics/answer/10104470" rel="noopener nofollow" target="_blank">support.google.com/analytics/answer/10104470</a></span></div>
+<p>Google посочва, че филтрите влизат в сила след двадесет и четири до тридесет и шест часа и не действат с обратна сила. Данните, постъпили преди филтърът да е активен, остават в отчетите ви завинаги.</p>
+<h3 id="the-booking-system-problem">Проблемът със системата за записване на час</h3>
+<p>Това е най-характерният провал в измерването за денталните практики и заслужава собствен параграф.</p>
+<p>Ако онлайн записването на час, пациентският портал или страницата за плащане са на различен домейн от сайта ви, а при повечето е така, то без настройка GA4 третира пациента, който си запазва час, като двама отделни души с две отделни сесии. По-лошото е, че когато след това се върне на сайта ви, доставчикът на системата за записване се появява като източник на препращане и взема заслугата за конверсията, която реално е донесло органичното търсене.</p>
+<p>Има две решения и кое ще използвате зависи от това дали можете да поставите своя таг на другия домейн.</p>
+<h4>Ако можете да поставите таг на другия домейн: междудомейнно измерване</h4>
+<p>Admin, Data streams, Web, изберете потока, Configure tag settings, Configure your domains. Добавете двата домейна. Изискването е всяка страница и на двата домейна да използва един и същ Measurement ID от един и същ уеб поток от данни.</p>
+<div class="src"><b>Източник</b><span>Помощ за Google Analytics, Set up cross-domain measurement · <a href="https://support.google.com/analytics/answer/10071811" rel="noopener nofollow" target="_blank">support.google.com/analytics/answer/10071811</a></span></div>
+<h4>Ако не можете: изключване на препращания</h4>
+<p>Admin, Data streams, Web, изберете потока, Configure tag settings, Show all, List unwanted referrals. Добавете домейна за записване на час. Тогава GA4 ще спре да го третира като източник на трафик. До петдесет домейна на поток.</p>
+<div class="src"><b>Източник</b><span>Помощ за Google Analytics, Identify unwanted referrals · <a href="https://support.google.com/analytics/answer/10327750" rel="noopener nofollow" target="_blank">support.google.com/analytics/answer/10327750</a></span></div>
+<p>Случаят на употреба, който самият Google посочва за тази настройка, е почти точно денталният сценарий: сайт, който използва външен платежен процесор, където потребителите се връщат, след като са платили на другия домейн.</p>
+<h2 id="step-eight-what-to-actually-look-at">Стъпка осма: какво всъщност да гледате</h2>
+<p>Вече имате чисти данни. Следващата грешка е да се удавите в тях.</p>
+<figure class="fig" id="fig-v16">
+<div class="fig-hd"><div class="t">Първите ви деветдесет дни истинско четене на данните</div></div>
+<div class="fig-bd"><div class="f-tl"><div class="r"><div class="wk">Ден 1</div>
+<div class="bx"><div class="h">Всичко е инсталирано и проверено</div><div class="p">GA4, Tag Manager, Search Console, Bing. Три ключови събития се задействат и са тествани в режим Preview.</div></div></div><div class="r"><div class="wk">Ден 7</div>
+<div class="bx"><div class="h">Първа проверка за адекватност</div><div class="p">Изглежда ли числото за трафика като истинска седмица? Записват ли се обажданията? Изключен ли е домейнът за записване на час? Поправете грешното сега, а не на третия месец.</div></div></div><div class="r"><div class="wk">Ден 30</div>
+<div class="bx"><div class="h">Първа честна базова стойност</div><div class="p">Вече имате месец чисти данни. Това е числото, с което ще се сравнява всеки следващ месец. Запишете го.</div></div></div><div class="r"><div class="wk">Ден 60</div>
+<div class="bx"><div class="h">Първа тенденция</div><div class="p">Два чисти месеца. Search Console започва да показва за кои заявки се появявате и на какви позиции. Първо погледнете позициите от единадесета до двадесета.</div></div></div><div class="r"><div class="wk">Ден 90</div>
+<div class="bx"><div class="h">Първо решение, което можете да защитите</div><div class="p">Достатъчно данни, за да кажете кой канал е донесъл пациенти и кой е донесъл трафик. Това не е едно и също, а парите са точно в разликата.</div></div></div></div></div>
+</figure>
+<h3 id="the-four-numbers">Четирите числа</h3>
+<p>За дентална практика четири числа отговарят на почти всеки въпрос, който си струва да се зададе.</p>
+<div class="fig"><div class="fig-bd" style="padding:0">
+<div class="f-tw" style="margin:0;padding:0"><table class="f-tbl">
+<thead><tr><th>Число</th><th>Къде се намира</th><th>Какво ви казва</th></tr></thead>
+<tbody><tr><td>Органични сесии</td><td>GA4, Traffic acquisition</td><td>Намира ли ви търсенето изобщо</td></tr><tr><td>Ключови събития</td><td>GA4, отчетът Key events</td><td>Опитал ли се е някой да се свърже с вас</td></tr><tr><td>Средна позиция</td><td>Search Console, Performance</td><td>Изкачвате ли се или стоите на място</td></tr><tr><td>Заявки на позиции от 11 до 20</td><td>Search Console, Performance, с филтър</td><td>Къде се крият следващите успехи</td></tr></tbody>
+</table></div></div>
+<div class="f-scroll" style="padding:0 20px 14px">Превъртете таблицата настрани, за да видите всички колони.</div></div>
+<h4>Трикът с позициите от единадесета до двадесета</h4>
+<p>Това са десетте минути с най-висока възвръщаемост в Search Console и почти никой не ги отделя.</p>
+<p>Отворете отчета Performance. Добавете филтър за средна позиция, по-голяма от 10 и по-малка от 21. Сортирайте по показвания. Това, което виждате, е всяка заявка, за която сте на втората страница: виждат ви, но не кликват.</p>
+<p>Тези страници вече се класират. Вече имат известен авторитет в Google по тази тема. Да преместите една от тях от позиция 14 на позиция 8 е много по-малка задача от създаването на нова страница от нулата, а разликата в трафика е огромна.</p>
+<p>Backlinko анализира дванадесет милиона заявки за търсене и установи, че първите три органични резултата получават 54,4 процента от всички кликове, докато резултатите на втората страница получават 0,63 процента. Пропастта между първата и втората страница не е постепенна.</p>
+<div class="src"><b>Източник</b><span>Backlinko, проучване на CTR в Google, 4 милиона резултата и 12,1 милиона заявки · <a href="https://backlinko.com/google-ctr-stats" rel="noopener nofollow" target="_blank">backlinko.com/google-ctr-stats</a></span></div>
+<p>На практика това означава, че заявките от втората страница в Search Console са най-краткият ви път към повече пациенти и стоят там в очакване някой да ги погледне.</p>
+<aside class="acta">
+<h3>Ще извадим списъка ви от втората страница вместо вас</h3>
+<p>Дайте ни достъп за четене до Search Console за двадесет минути и ще ви върнем всяка заявка, за която се класирате между единадесета и двадесета позиция, подредена по потенциал, заедно с това какво трябва да се промени на всяка страница. Това е първото, което правим за всяка практика, с която работим.</p>
+<a class="btn btn-primary" href="https://calendly.com/maxlezginov/free-marketing-consultation" rel="noopener" target="_blank">Запазете безплатна стратегическа среща</a>
+<div class="fine">Безплатен одит · без натиск за продажба · без договор · без обвързване</div>
+</aside>
+<h2 id="bonus-building-a-dashboard-your-practice-owner-will-actually">Бонус: табло, което собственикът на практиката наистина ще чете</h2>
+<p>Всичко дотук произвежда данни. Този раздел произвежда отчет.</p>
+<p>Разликата е важна. Google Analytics е отлична база данни и слаб отчет. Никой, който управлява дентална практика, не иска да учи интерфейса на GA4 и не би трябвало да се налага. Това, което искат, е една страница, отваряна веднъж месечно, която отговаря дали маркетингът е проработил.</p>
+<p>Looker Studio е безплатният инструмент на Google за отчети и прави точно това.</p>
+<figure class="fig" id="fig-v17">
+<div class="fig-hd"><div class="t">Бонус. Как изглежда готово табло с отчети</div></div>
+<div class="fig-bd"><div class="f-ui"><div class="bar2"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">lookerstudio.google.com</span></div>
+<div class="inr"><div class="f-uih"><div class="lg"></div><div class="nm">Looker Studio</div><div class="rt">SEO резултати · последните 30 дни</div></div>
+<div class="f-stats" style="margin-bottom:18px">
+<div class="f-st"><div class="n">2 418</div><div class="k">Органични сесии</div><div class="sub">▲ 34% спрямо предходния период</div></div>
+<div class="f-st g"><div class="n">61</div><div class="k">Натискания на телефона</div><div class="sub">▲ 22%</div></div>
+<div class="f-st m"><div class="n">24</div><div class="k">Заявки за час</div><div class="sub">▲ 9%</div></div>
+<div class="f-st"><div class="n">11,4</div><div class="k">Ср. позиция, следени ключови думи</div><div class="sub">▼ от 18,7</div></div></div>
+<div class="f-row"><div class="lb">Органично търсене</div><div class="tr"><div class="bar" style="width:100%"></div></div><div class="vl">2 418</div></div>
+<div class="f-row g"><div class="lb">Google Business Profile</div><div class="tr"><div class="bar" style="width:41%"></div></div><div class="vl">987</div></div>
+<div class="f-row m"><div class="lb">Директен</div><div class="tr"><div class="bar" style="width:26%"></div></div><div class="vl">631</div></div>
+<div class="f-row d"><div class="lb">Препращане</div><div class="tr"><div class="bar" style="width:8%"></div></div><div class="vl">188</div></div></div></div><div class="f-note"><b>Една страница. Четири числа най-отгоре.</b> Собственикът на практиката има около деветдесет секунди за един отчет. Ако горната част на страницата не отговаря на въпроса „проработи ли това“, останалата част от таблото никога няма да бъде прочетена.</div></div>
+</figure>
+<p>Приблизително така изглежда готовото табло. Четири числа най-отгоре, всяко със сравнение с предходния период. Разбивка по канали под тях. Всичко останало по-надолу, за месеците, в които някой иска да се рови.</p>
+<h3 id="how-to-build-it">Как да го изградите</h3>
+<figure class="fig" id="fig-v18">
+<div class="fig-hd"><div class="t">Как сами да изградите това табло</div><div class="s">Безплатно и около час първия път</div></div>
+<div class="fig-bd"><div><div class="f-stp"><div class="num">1</div><div class="tx"><div class="h">Първо създайте източниците на данни, не отчета</div><div class="p">В Looker Studio изберете Create, след това Data Source. Добавете <b>Google Analytics</b> и изберете ресурса си. След това добавете <b>Search Console</b> отделно.</div></div></div><div class="f-stp"><div class="num">2</div><div class="tx"><div class="h">Добавете Search Console два пъти</div><div class="p">Search Console предлага две таблици, <b>Site Impression</b> и <b>URL Impression</b>, а един източник на данни може да използва само една от тях. Ако искате данни за заявки и данни за страници, ви трябват два източника на данни.</div></div></div><div class="f-stp g"><div class="num">3</div><div class="tx"><div class="h">Поставете четирите числа най-отгоре</div><div class="p">Сесии, натискания на телефона, изпратени форми, средна позиция. Използвайте карти с показател (scorecards) с включено сравнение с предходния период. Всичко останало отива под първия екран.</div></div></div><div class="f-stp g"><div class="num">4</div><div class="tx"><div class="h">Задайте контролата за период на последните 30 дни</div><div class="p">След това добавете сравнение с предходния период. Абсолютните числа не означават нищо без сравнение.</div></div></div><div class="f-stp g"><div class="num">5</div><div class="tx"><div class="h">Насрочете го като месечен имейл</div><div class="p">Looker Studio може да изпраща отчета като PDF по график. Отчет, който никой не отваря, не е отчет.</div></div></div></div></div>
+</figure>
+<div class="src"><b>Източник</b><span>Помощ за Looker Studio, Connect to Google Analytics · <a href="https://docs.cloud.google.com/looker/docs/studio/connect-to-google-analytics" rel="noopener nofollow" target="_blank">docs.cloud.google.com/looker/docs/studio/connect-to-google-ana…</a></span></div>
+<h4>Детайлът в Search Console, в който хората се спъват</h4>
+<p>Когато свържете Search Console, той ви моли да изберете таблица. Те са две: Site Impression и URL Impression. Site Impression ви дава данни на ниво заявка. URL Impression ви дава данни на ниво страница. Един източник на данни може да използва само една от тях.</p>
+<p>Затова, ако искате и двете в един отчет, а вие искате, създайте два отделни източника на данни от Search Console и добавете и двата в същия отчет. Това не е очевидно и никъде в интерфейса не е обяснено добре.</p>
+<div class="src"><b>Източник</b><span>Помощ за Looker Studio, Connect to Search Console · <a href="https://docs.cloud.google.com/data-studio/connect-to-search-console" rel="noopener nofollow" target="_blank">docs.cloud.google.com/data-studio/connect-to-search-console</a></span></div>
+<h4>Правила за дизайн, благодарение на които таблото се чете</h4>
+<ul><li>Четири числа най-отгоре, не повече. Сесии, обаждания, изпратени форми, средна позиция.</li><li>Всяко число получава сравнение с предходния период. Абсолютното число само по себе си е безсмислено.</li><li>Една страница. Ако се превърта повече от два екрана, разделете го на два отчета, вместо да удължавате единия.</li><li>Назовете всичко на разбираем език. „Ключови събития“ става „Запитвания от пациенти“. „Сесии“ става „Посещения на сайта“.</li><li>Поставете контролата за период най-отгоре, където се вижда, за да не сбърка никой две седмици с месец.</li></ul>
+<h4>Насрочете го</h4>
+<p>Looker Studio ще изпраща отчета по имейл като PDF по график. Задайте го за първо число на месеца. Отчет, за който някой трябва да се сети да влезе в системата, е отчет, който ще бъде погледнат два пъти и после никога повече.</p>
+<div class="src"><b>Източник</b><span>Помощ за Looker Studio, Ways to share your reports · <a href="https://docs.cloud.google.com/data-studio/ways-to-share-your-reports" rel="noopener nofollow" target="_blank">docs.cloud.google.com/data-studio/ways-to-share-your-reports</a></span></div>
+<aside class="cal tip"><div class="ch">Две табла, не едно</div><p>Ако освен SEO използвате и Google Ads, изградете ги като два отделни отчета, а не като един комбиниран.</p><p>Въпросите са различни. SEO е тенденция, която следите в продължение на месеци. Платената реклама е разход, който следите ден за ден. Комбинирането им на една страница дава нещо, което не отговаря добре на нито един от двата въпроса.</p></aside>
+<h2 id="the-complete-checklist">Пълният контролен списък</h2>
+<p>Всичко от това ръководство, на едно място. Минете ред по ред и когато всеки ред е отметнат, ще имате настройка на измерването, по-добра от тази на повечето дентални практики на вашия пазар.</p>
+<figure class="fig" id="fig-v19">
+<div class="fig-hd"><div class="t">Готовата ви система за проследяване на една страница</div><div class="s">Разпечатайте и отметнете</div></div>
+<div class="fig-bd"><div class="f-kv"><div class="k">Google Analytics 4</div><div class="v">Ресурсът е създаден, уеб потокът от данни работи, Measurement ID е записан</div><div class="k">Google Tag Manager</div><div class="v">И двата кода са инсталирани, контейнерът е публикуван, режимът Preview се свързва</div><div class="k">GA4 се задейства чрез GTM</div><div class="v">Един Google Tag на All Initialization Events. Никъде няма код, вграден директно в сайта</div><div class="k">Search Console</div><div class="v">Ресурс Domain, потвърден чрез DNS, картата на сайта е изпратена</div><div class="k">Bing Webmaster Tools</div><div class="v">Импортиран от Search Console</div><div class="k">call_click</div><div class="v">Тригер Just Links, Click URL contains tel:, тестван на реален телефон</div><div class="k">email_click</div><div class="v">Тригер Just Links, Click URL contains mailto:</div><div class="k">form_submit_success</div><div class="v">dataLayer push при успех, тригер Custom Event</div><div class="k">Ключови събития</div><div class="v">И трите са включени в Admin, Data display, Events</div><div class="k">Вътрешен трафик</div><div class="v">Определен в потока от данни и изключен чрез филтър за данни в състояние Active</div><div class="k">Междудомейнно измерване</div><div class="v">Домейнът за записване на час или на портала е добавен или е посочен като нежелано препращане</div><div class="k">Looker Studio</div><div class="v">Една страница, четири числа най-отгоре, изпраща се всеки месец</div></div></div>
+</figure>
+<h3 id="and-the-honest-caveat">И честното уточнение</h3>
+<p>Нищо от това не ви казва дали проследеното натискане на телефонния номер е довело до записан час. Казва ви, че някой е натиснал. Разликата между двете е реална и точно там практиките губят нишката.</p>
+<p>Затварянето на тази празнина означава или софтуер за проследяване на обажданията, който струва пари, или навик на рецепцията да пита всеки нов пациент как ви е намерил и да го записва, което струва дисциплина. И двете работят. Нито едно не е безплатно. Всеки, който ви казва, че само анализите затварят този кръг, се опитва да ви продаде нещо.</p>
+<p>Това, което тази настройка наистина ви дава, е истината за всичко до този момент, което е повече, отколкото повечето практики някога са имали, и е достатъчно, за да вземате добри решения.</p>
+<aside class="acta">
+<h3>Нека погледнем числата ви, преди да прекарате още един месец в гадаене</h3>
+<p>Безплатният маркетингов одит обхваща настройката на проследяването ви, данните ви от Search Console, вашия Google Business Profile и къде конкурентите ви ви изпреварват. Получавате изводите независимо дали някога ще работите с нас. Без договори, без обвързване, и ще ви кажем направо, ако смятаме, че не можем да помогнем.</p>
+<a class="btn btn-primary" href="https://calendly.com/maxlezginov/free-marketing-consultation" rel="noopener" target="_blank">Запазете своя безплатен одит и стратегическа среща</a>
+<div class="fine">Безплатен одит · без натиск за продажба · без договор · без обвързване</div>
+</aside>
+<p style="font-style:italic">Следва в поредицата: как да изградите стратегия за ключови думи, която ви казва точно кои страници да създадете, с помощта на SEMrush и безплатните алтернативи, които ви доближават почти докрай до целта.</p>
+<div class="art-next">
+<div class="tt">Продължете с</div>
+<div class="next-grid">
+<a class="pcard" href="/bg/blog/dental-keyword-research-strategy-content-planner">
+<div class="thumb">
+<div class="pn">Част втора · Ключови думи</div>
+<div class="pt">Стратегията за ключови думи, която ви казва кои страници да създадете</div>
+</div>
+<div class="body">
+<h3>Проучване на ключови думи и планиране на съдържанието</h3>
+<p>Да публикувате без проучване на ключови думи не е бавен път към трафика. За 96 процента от страниците изобщо не е път. Ето как протича проучването, плюс безплатния му вариант.</p>
+<div class="fm"><span>20 мин. четене</span><span>Ключови думи · Съдържание · Semrush</span></div>
+<div class="go">Прочетете ръководството <svg aria-hidden="true" fill="none" height="14" viewbox="0 0 16 16" width="14"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></div>
+</div>
+</a>
+<a class="pcard" href="/bg/blog/google-business-profile-guide-for-dentists">
+<div class="thumb">
+<div class="pn">Част трета · Локално SEO</div>
+<div class="pt">Ръководство за Google Business Profile за дентални практики</div>
+</div>
+<div class="body">
+<h3>Google Business Profile и картовият блок</h3>
+<p>За една местна практика профилът често върши повече работа от сайта, а почти никой не се грижи за него. Одит в четиринайсет точки, полетата, които влияят на класирането, и честната истина за публикациите.</p>
+<div class="fm"><span>19 мин. четене</span><span>Локално SEO · Картов блок · Отзиви</span></div>
+<div class="go">Прочетете ръководството <svg aria-hidden="true" fill="none" height="14" viewbox="0 0 16 16" width="14"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></div>
+</div>
+</a>
+</div>
+</div>
+</article>
+<aside aria-label="В тази статия" class="art-toc">
+<div class="tt">В тази статия</div>
+<a href="#the-problem-you-are-paying-for-marketing-you-cannot-see">Проблемът: плащате за маркетинг, който не виждате</a>
+<a href="#what-you-are-building">Какво изграждате</a>
+<a href="#step-one-google-analytics-4">Стъпка първа: Google Analytics 4</a>
+<a href="#step-two-google-tag-manager">Стъпка втора: Google Tag Manager</a>
+<a href="#step-three-connect-analytics-through-tag-manager">Стъпка трета: свържете Analytics чрез Tag Manager</a>
+<a href="#step-four-search-console-and-bing-webmaster-tools">Стъпка четвърта: Search Console и Bing Webmaster Tools</a>
+<a href="#step-five-the-event-logic-which-is-the-actual-work">Стъпка пета: логиката на събитията, която е истинската работа</a>
+<a href="#step-six-mark-them-as-key-events">Стъпка шеста: маркирайте ги като ключови събития</a>
+<a href="#step-seven-the-five-settings-that-quietly-ruin-the-data">Стъпка седма: петте настройки, които тихомълком съсипват данните</a>
+<a href="#step-eight-what-to-actually-look-at">Стъпка осма: какво всъщност да гледате</a>
+<a href="#bonus-building-a-dashboard-your-practice-owner-will-actually">Бонус: табло, което собственикът на практиката наистина ще чете</a>
+<a href="#the-complete-checklist">Пълният контролен списък</a>
+</aside>
+</div>
+</div>
+</main>
+<footer class="foot">
+<div class="wrap foot-in">
+<div class="foot-brand">
+<img alt="" class="mark-logo" height="30" src="data:image/png;base64,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" width="30"/>
+<span>dental-marketing<b>.org</b></span>
+</div>
+<nav aria-label="Долна навигация" class="foot-nav">
+<a href="/bg">Начало</a> <a href="/bg/blog">Блог</a> <a href="/bg/case-studies">Казуси</a> <a href="https://calendly.com/maxlezginov/free-marketing-consultation" rel="noopener" target="_blank">Запазете разговор</a>
+<div aria-label="Език" class="lang" role="group"><a href="/blog/dental-seo-tracking-ga4-search-console-tag-manager" hreflang="en" lang="en">EN</a><a aria-current="true" href="/bg/blog/dental-seo-tracking-ga4-search-console-tag-manager" hreflang="bg" lang="bg">BG</a></div></nav>
+<div class="foot-fine">© 2026 Dental Marketing. SEO за частни дентални практики.</div>
+</div>
+</footer>
+<script>
+(function(){
+  // table of contents highlighting
+  var toc = document.querySelector('.art-toc');
+  if (toc && 'IntersectionObserver' in window) {
+    var links = {};
+    toc.querySelectorAll('a[href^="#"]').forEach(function(a){ links[a.getAttribute('href').slice(1)] = a; });
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        var a = links[en.target.id];
+        if (!a) return;
+        if (en.isIntersecting) { Object.values(links).forEach(function(x){ x.classList.remove('on'); }); a.classList.add('on'); }
+      });
+    }, { rootMargin: '-84px 0px -70% 0px', threshold: 0 });
+    Object.keys(links).forEach(function(id){ var el = document.getElementById(id); if (el) io.observe(el); });
+  }
+  // blog carousel
+  document.querySelectorAll('[data-car]').forEach(function(wrap){
+    var track = wrap.querySelector('.car-track');
+    var prev = wrap.querySelector('[data-car-prev]');
+    var next = wrap.querySelector('[data-car-next]');
+    if (!track || !prev || !next) return;
+    function step(){ var c = track.firstElementChild; return c ? c.getBoundingClientRect().width + 15 : 300; }
+    function sync(){
+      prev.disabled = track.scrollLeft < 6;
+      next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 6;
+    }
+    prev.addEventListener('click', function(){ track.scrollBy({ left: -step(), behavior: 'smooth' }); });
+    next.addEventListener('click', function(){ track.scrollBy({ left: step(), behavior: 'smooth' }); });
+    track.addEventListener('scroll', sync, { passive: true });
+    window.addEventListener('resize', sync);
+    sync();
+  });
+  // click-to-load YouTube facade
+  document.querySelectorAll('.ytl').forEach(function(b){
+    if (b.dataset.ytlBound) return;      // a page may ship its own richer handler
+    b.dataset.ytlBound = '1';
+    b.addEventListener('click', function(){
+      if (b.classList.contains('playing')) return;
+      var id = b.getAttribute('data-yt');
+      var f = document.createElement('iframe');
+      f.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0&modestbranding=1';
+      f.title = b.getAttribute('aria-label') || 'Video';
+      f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      f.referrerPolicy = 'strict-origin-when-cross-origin';
+      f.allowFullscreen = true;
+      b.innerHTML = '';
+      b.appendChild(f);
+      b.classList.add('playing');
+    });
+  });
+})();
+</script>
+</body>
+</html>

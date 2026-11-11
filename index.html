@@ -697,17 +697,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .car-head .shead{ margin-bottom:0; }
 .car-wrap{ position:relative; }
 .car-track{
-  display:grid; grid-auto-flow:column; grid-auto-columns:minmax(276px,1fr);
-  gap:15px; overflow-x:auto; scroll-snap-type:x mandatory; scroll-behavior:smooth;
-  padding-bottom:6px; scrollbar-width:thin;
+  --car-gap:18px;
+  display:grid; grid-auto-flow:column; grid-auto-columns:calc((100% - 2 * var(--car-gap)) / 3);
+  gap:var(--car-gap); overflow-x:auto; overscroll-behavior-x:contain;
+  scroll-snap-type:x mandatory; scroll-behavior:smooth; scroll-padding-inline:6px;
+  padding:6px 6px 16px; margin:-6px -6px -16px; scrollbar-width:none;
 }
-@media (min-width:1000px){ .car-track{ grid-auto-columns:minmax(0,1fr); overflow-x:visible; } }
+.car-track::-webkit-scrollbar{ display:none; }
+@media (max-width:999px){ .car-track{ --car-gap:15px; grid-auto-columns:calc((100% - var(--car-gap)) / 2); } }
+@media (max-width:640px){ .car-track{ grid-auto-columns:84%; } }
 .car-track > *{ scroll-snap-align:start; }
-.car-track::-webkit-scrollbar{ height:6px; }
-.car-track::-webkit-scrollbar-thumb{ background:var(--ghost); border-radius:3px; }
-.car-track::-webkit-scrollbar-track{ background:transparent; }
-.car-nav{ display:flex; gap:8px; }
-@media (min-width:1000px){ .car-nav{ display:none; } }
+.car-track .pcard .thumb .pt{ display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
+.car-nav{ display:flex; gap:8px; align-items:center; margin-left:auto; }
+.car-count{ font-size:.78rem; font-weight:700; color:var(--ink-faint); margin-right:6px; font-variant-numeric:tabular-nums; white-space:nowrap; }
 .car-btn{
   width:38px; height:38px; border-radius:50%; border:1px solid var(--line); background:var(--card);
   color:var(--ink); display:flex; align-items:center; justify-content:center; cursor:pointer; flex:0 0 auto;
@@ -1252,6 +1254,7 @@ html[lang="bg"] h1{ letter-spacing:-.01em; }
 <p>Nine guides covering tracking, keywords, service pages, Google Business Profile, reviews, AI search, press distribution and the 2026 numbers. No email wall, no gated download, and every figure sourced.</p>
 </div>
 <div class="car-nav">
+<span aria-live="polite" class="car-count" data-car-count=""></span>
 <button aria-label="Previous guides" class="car-btn" data-car-prev=""><svg aria-hidden="true" fill="none" height="16" viewbox="0 0 16 16" width="16"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></button>
 <button aria-label="More guides" class="car-btn" data-car-next=""><svg aria-hidden="true" fill="none" height="16" viewbox="0 0 16 16" width="16"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></button>
 </div>
@@ -1366,7 +1369,7 @@ html[lang="bg"] h1{ letter-spacing:-.01em; }
 </div>
 </a></div>
 </div>
-<div class="car-hint">Swipe for more · <a href="/blog">see all four guides</a></div>
+<div class="car-hint">Swipe for more · <a href="/blog">see all nine guides</a></div>
 <div style="margin-top:22px"><a class="btn btn-ghost btn-sm" href="/blog">All guides</a></div>
 </div>
 </section>
@@ -1510,13 +1513,23 @@ html[lang="bg"] h1{ letter-spacing:-.01em; }
   // blog carousel
   document.querySelectorAll('[data-car]').forEach(function(wrap){
     var track = wrap.querySelector('.car-track');
-    var prev = wrap.querySelector('[data-car-prev]');
-    var next = wrap.querySelector('[data-car-next]');
+    var scope = wrap.closest('section') || wrap;
+    var prev = scope.querySelector('[data-car-prev]');
+    var next = scope.querySelector('[data-car-next]');
+    var count = scope.querySelector('[data-car-count]');
     if (!track || !prev || !next) return;
-    function step(){ var c = track.firstElementChild; return c ? c.getBoundingClientRect().width + 15 : 300; }
+    function gap(){ return parseFloat(getComputedStyle(track).columnGap) || 15; }
+    function cardW(){ var c = track.firstElementChild; return c ? c.getBoundingClientRect().width + gap() : 300; }
+    function step(){ var w = cardW(); return Math.max(w, Math.floor((track.clientWidth + gap()) / w) * w); }
     function sync(){
       prev.disabled = track.scrollLeft < 6;
       next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 6;
+      if (count) {
+        var total = track.children.length, w = cardW();
+        var first = Math.min(total, Math.round(track.scrollLeft / w) + 1);
+        var last = Math.min(total, first + Math.max(1, Math.floor((track.clientWidth + gap()) / w)) - 1);
+        count.textContent = (first === last ? first : first + '–' + last) + ' / ' + total;
+      }
     }
     prev.addEventListener('click', function(){ track.scrollBy({ left: -step(), behavior: 'smooth' }); });
     next.addEventListener('click', function(){ track.scrollBy({ left: step(), behavior: 'smooth' }); });
